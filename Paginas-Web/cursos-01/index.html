@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compila — Cursos y mentorías de desarrollo web</title>
+<meta name="description" content="Aprendé desarrollo web y conseguí tus primeros clientes en menos de 90 días. Cursos, mentorías y plantillas profesionales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce" id="announceBar">
+  <span>🔥 Solo hoy — 20% OFF en todos los cursos con el cupón <strong>COMPILA20</strong></span>
+  <button class="close-bar" id="closeAnnounce" aria-label="Cerrar">✕</button>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav" id="navbar">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo"><span class="mark">&lt;/&gt;</span>Compila</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Cursos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#faq" class="btn btn-ghost btn-sm">Ver resultados</a>
+      <a href="#precios" class="btn btn-primary btn-sm">Empezar ahora</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-spot" id="heroSpot"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal is-visible">
+      <div class="eyebrow">Cursos y mentorías 100% en español</div>
+      <h1>
+        <span class="line">Aprendé <span class="accent">desarrollo web</span></span>
+        <span class="line">y conseguí tus primeros</span>
+        <span class="line">clientes en menos de 90 días.</span>
+      </h1>
+      <p class="lead">Cursos prácticos, mentorías 1 a 1 y plantillas listas para producción, pensados para que salgas de cero y llegues a cobrar tu primer proyecto.</p>
+      <div class="hero-actions">
+        <a href="#servicios" class="btn btn-primary">Ver cursos</a>
+        <a href="#resultados" class="btn btn-ghost">Ver resultados</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>+350</strong>alumnos</div>
+        <div><strong>4.9★</strong>calificación</div>
+        <div><strong>95%</strong>satisfacción</div>
+        <div><strong>500+</strong>proyectos entregados</div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-1 is-visible">
+      <div class="editor">
+        <div class="editor-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="filename">tu-carrera.js</span>
+        </div>
+        <div class="editor-body" id="typeTarget"></div>
+        <div class="editor-preview">
+          <div class="status"><span class="pulse"></span>build exitoso</div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-dim);">deploy → primer cliente</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="item"><strong>+20</strong> cursos publicados</div>
+    <div class="item"><strong>+10.000</strong> horas de contenido</div>
+    <div class="item"><strong>+350</strong> alumnos activos</div>
+    <div class="item"><strong>98%</strong> recomienda el curso</div>
+    <div class="item"><strong>30 días</strong> de garantía</div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">El problema</div>
+      <h2>¿Te pasa esto?</h2>
+      <p>La mayoría no falla por falta de talento, sino por no tener un camino claro ni feedback real sobre lo que está haciendo.</p>
+    </div>
+    <div class="problem-grid">
+      <ul class="problem-list reveal">
+        <li><span class="x">✕</span>No conseguís clientes aunque sepas programar.</li>
+        <li><span class="x">✕</span>No sabés por dónde empezar ni qué stack elegir.</li>
+        <li><span class="x">✕</span>Comprás cursos sueltos pero no aprendés a aplicarlo.</li>
+        <li><span class="x">✕</span>Perdés meses viendo videos sin construir nada real.</li>
+        <li><span class="x">✕</span>No tenés a quién preguntarle cuando te trabás.</li>
+      </ul>
+      <div class="problem-art reveal reveal-delay-1">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="86" stroke="var(--border-strong)" stroke-width="1.5" stroke-dasharray="4 6"/>
+          <rect x="55" y="60" width="90" height="64" rx="8" stroke="var(--accent)" stroke-width="2.5"/>
+          <path d="M70 84h60M70 98h40" stroke="var(--text-dim)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M92 140l-14 20M108 140l14 20" stroke="var(--danger)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCION -->
+<section class="section-alt" id="servicios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">La solución</div>
+      <h2>Así solucionamos <span class="accent">ese problema</span>.</h2>
+      <p>Tres formas de trabajar juntos, según cuánto acompañamiento necesites.</p>
+    </div>
+    <div class="cards-3">
+      <div class="card reveal">
+        <div class="icon">🎓</div>
+        <h3>Cursos grabados</h3>
+        <p>Rutas completas paso a paso, con proyectos reales y ejercicios evaluados, a tu ritmo.</p>
+        <a class="more" href="#precios">Ver más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <div class="icon">🧑‍💻</div>
+        <h3>Mentoría 1 a 1</h3>
+        <p>Sesiones en vivo para revisar tu código, tu portafolio y tu estrategia para conseguir clientes.</p>
+        <a class="more" href="#precios">Ver más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="icon">🧩</div>
+        <h3>Plantillas y recursos</h3>
+        <p>Componentes, landing pages y código fuente listo para adaptar a tus propios proyectos.</p>
+        <a class="more" href="#precios">Ver más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Beneficios</div>
+      <h2>Lo que realmente vas a conseguir.</h2>
+    </div>
+    <div class="benefits-grid reveal">
+      <div class="benefit"><span class="check">✓</span><div><strong>Aprendés paso a paso</strong><span>Sin videos sueltos: una ruta clara de cero a producción.</span></div></div>
+      <div class="benefit"><span class="check">✓</span><div><strong>Conseguís clientes</strong><span>Estrategia real para presentar tu trabajo y cerrar proyectos.</span></div></div>
+      <div class="benefit"><span class="check">✓</span><div><strong>Ahorrás meses</strong><span>Evitá los errores típicos que frenan a los autodidactas.</span></div></div>
+      <div class="benefit"><span class="check">✓</span><div><strong>Acceso de por vida</strong><span>Entrás una vez y volvés cuando lo necesites, sin vencimiento.</span></div></div>
+      <div class="benefit"><span class="check">✓</span><div><strong>Actualizaciones incluidas</strong><span>El contenido se actualiza con las herramientas actuales.</span></div></div>
+      <div class="benefit"><span class="check">✓</span><div><strong>Soporte real</strong><span>Comunidad y mentores para responder tus dudas.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2>De cero a tu primer proyecto cobrado.</h2>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="fill" id="timelineFill"></div>
+      <div class="tl-step reveal"><span class="num">1</span><h4>Elegís el curso o plan</h4><p>Según tu nivel y el tiempo que puedas dedicarle por semana.</p></div>
+      <div class="tl-step reveal"><span class="num">2</span><h4>Pagás de forma segura</h4><p>Tarjeta, transferencia o cuotas — vos elegís el método.</p></div>
+      <div class="tl-step reveal"><span class="num">3</span><h4>Accedés inmediatamente</h4><p>Sin esperas: entrás a la plataforma apenas se confirma el pago.</p></div>
+      <div class="tl-step reveal"><span class="num">4</span><h4>Aprendés con proyectos reales</h4><p>Cada módulo termina en algo que podés mostrar en tu portafolio.</p></div>
+      <div class="tl-step reveal"><span class="num">5</span><h4>Aplicás lo aprendido</h4><p>Con feedback directo de mentores sobre tu código y tu presentación.</p></div>
+      <div class="tl-step reveal"><span class="num">6</span><h4>Conseguís resultados</h4><p>Portafolio, primeros clientes y una base para seguir creciendo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGO -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Catálogo</div>
+      <h2>Cursos y servicios disponibles.</h2>
+      <p>Elegí el punto de partida según tu nivel actual.</p>
+    </div>
+    <div class="catalog-grid">
+      <div class="course-card reveal">
+        <div class="thumb"><span class="ribbon">Más vendido</span><span class="glyph">&lt;/&gt;</span></div>
+        <div class="course-body">
+          <div class="course-meta"><span>Principiante</span><span>· 8 semanas</span></div>
+          <h3>Desarrollo Web desde Cero</h3>
+          <p>HTML, CSS, JavaScript y tu primer proyecto publicado en producción.</p>
+          <div class="course-foot">
+            <div class="price-tag"><small>USD 249</small>USD 179</div>
+            <a href="#precios" class="btn btn-primary btn-sm">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="course-card reveal reveal-delay-1">
+        <div class="thumb"><span class="ribbon alt">Nuevo</span><span class="glyph">{ }</span></div>
+        <div class="course-body">
+          <div class="course-meta"><span>Intermedio</span><span>· 10 semanas</span></div>
+          <h3>React + Backend Profesional</h3>
+          <p>Aplicaciones completas con React, APIs propias y bases de datos.</p>
+          <div class="course-foot">
+            <div class="price-tag"><small>USD 349</small>USD 259</div>
+            <a href="#precios" class="btn btn-primary btn-sm">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="course-card reveal reveal-delay-2">
+        <div class="thumb"><span class="ribbon" style="background:var(--danger);color:#2a0d08;">Oferta</span><span class="glyph">$_</span></div>
+        <div class="course-body">
+          <div class="course-meta"><span>Todos los niveles</span><span>· 4 sesiones</span></div>
+          <h3>Mentoría: Conseguí tu Primer Cliente</h3>
+          <p>Portafolio, propuesta comercial y estrategia de búsqueda activa.</p>
+          <div class="course-foot">
+            <div class="price-tag"><small>USD 199</small>USD 149</div>
+            <a href="#precios" class="btn btn-primary btn-sm">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUE INCLUYE -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Qué incluye</div>
+      <h2>Todo lo que vas a tener adentro.</h2>
+    </div>
+    <div class="include-grid reveal">
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Videos en HD, a tu ritmo</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Archivos de proyecto descargables</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Código fuente completo</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Comunidad privada de alumnos</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Servidor de Discord activo</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Actualizaciones sin costo extra</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Certificado de finalización</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Mentoría incluida según plan</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Ejercicios con corrección</div>
+      <div class="include-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Plantillas listas para reutilizar</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVA -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Comparativa</div>
+      <h2>Por qué elegir Compila.</h2>
+    </div>
+    <div class="table-scroll reveal">
+      <table class="compare-table">
+        <thead><tr><th>&nbsp;</th><th>Otros cursos</th><th class="us">Compila</th></tr></thead>
+        <tbody>
+          <tr><td>Soporte</td><td class="no">Sin soporte</td><td class="yes us-col">Soporte activo</td></tr>
+          <tr><td>Contenido</td><td class="no">Videos desactualizados</td><td class="yes us-col">Actualizado todo el año</td></tr>
+          <tr><td>Comunidad</td><td class="no">Sin comunidad</td><td class="yes us-col">Comunidad privada</td></tr>
+          <tr><td>Mentoría</td><td class="no">Sin mentoría</td><td class="yes us-col">Mentoría 1 a 1</td></tr>
+          <tr><td>Acceso</td><td class="no">Acceso limitado</td><td class="yes us-col">Acceso permanente</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="section-alt" id="resultados">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Resultados</div>
+      <h2>Antes y después de nuestros alumnos.</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="result-row before"><span class="tag">Antes</span><p>Sin clientes y sin saber cómo mostrar su trabajo.</p></div>
+        <div class="result-arrow">↓ 12 semanas de curso ↓</div>
+        <div class="result-row after"><span class="tag">Después</span><p>Sus primeros ingresos freelance y un portafolio activo.</p></div>
+        <div class="result-person"><div class="avatar">MA</div><div><strong>Marina Aguirre</strong><span>Desarrolladora Frontend Jr.</span></div></div>
+      </div>
+      <div class="result-card reveal reveal-delay-1">
+        <div class="result-row before"><span class="tag">Antes</span><p>No sabía programar ni por dónde empezar.</p></div>
+        <div class="result-arrow">↓ 8 semanas de curso ↓</div>
+        <div class="result-row after"><span class="tag">Después</span><p>Portafolio completo y su primer proyecto freelance entregado.</p></div>
+        <div class="result-person"><div class="avatar">DR</div><div><strong>Diego Ríos</strong><span>Desarrollador Web Junior</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTADISTICAS -->
+<section>
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow">En números</div>
+      <h2>Resultados que se pueden medir.</h2>
+    </div>
+    <div class="stats-grid reveal" id="statsGrid">
+      <div class="stat"><div class="num" data-count="500">0</div><div class="label">Alumnos</div></div>
+      <div class="stat"><div class="num" data-count="98">0</div><div class="label">% Satisfacción</div></div>
+      <div class="stat"><div class="num" data-count="20">0</div><div class="label">Cursos</div></div>
+      <div class="stat"><div class="num" data-count="10000">0</div><div class="label">Horas enseñadas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section-alt" id="testimonios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Testimonios</div>
+      <h2>Lo que dicen nuestros alumnos.</h2>
+    </div>
+    <div class="testi-track-wrap reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>Pasé de no saber nada de código a tener mi primer cliente en tres meses. La mentoría fue clave para animarme a cobrar lo que valía mi trabajo.</p>
+          <div class="testi-person"><div class="avatar">MA</div><div><strong>Marina Aguirre</strong><span>Frontend Jr.</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>Probé otros cursos antes y los abandoné. Acá terminé todo porque cada módulo se sentía útil de verdad, no relleno.</p>
+          <div class="testi-person"><div class="avatar">DR</div><div><strong>Diego Ríos</strong><span>Desarrollador Web</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>El soporte en Discord respondió todas mis dudas en horas, no días. Se nota que hay gente real detrás del curso.</p>
+          <div class="testi-person"><div class="avatar">SL</div><div><strong>Sofía López</strong><span>Freelance</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>La mentoría de portafolio me ayudó a conseguir dos entrevistas en la primera semana de aplicar.</p>
+          <div class="testi-person"><div class="avatar">JP</div><div><strong>Julián Pérez</strong><span>Full Stack Jr.</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section>
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow">Video</div>
+      <h2>Mirá cómo funciona por dentro.</h2>
+    </div>
+    <div class="video-shell reveal" id="videoShell">
+      <div class="play-btn">▶</div>
+      <div class="playing-label">▮▮ Reproduciendo — vista previa del campus virtual</div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section class="section-alt" id="precios">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow">Precios</div>
+      <h2>Elegí el plan a tu medida.</h2>
+      <p>Todos los planes incluyen 30 días de garantía.</p>
+    </div>
+    <div class="billing-toggle reveal">
+      <span>Mensual</span>
+      <button class="switch" id="billingSwitch" aria-label="Cambiar facturación"><span class="knob"></span></button>
+      <span>Anual</span>
+      <span class="save-tag">Ahorrás 20%</span>
+    </div>
+    <div class="plans-grid">
+      <div class="plan reveal">
+        <h3>Básico</h3>
+        <p class="desc">Para empezar por tu cuenta.</p>
+        <div class="price"><span class="amount" data-monthly="19" data-yearly="15">$19</span><span class="per">/mes</span></div>
+        <p class="price-sub">Facturado según el plan elegido</p>
+        <ul class="plan-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Acceso a 3 cursos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Comunidad de Discord</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Certificado digital</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost btn-block">Elegir Básico</a>
+      </div>
+      <div class="plan featured reveal reveal-delay-1">
+        <span class="plan-badge">Más elegido</span>
+        <h3>Profesional</h3>
+        <p class="desc">El más elegido por nuestros alumnos.</p>
+        <div class="price"><span class="amount" data-monthly="39" data-yearly="31">$39</span><span class="per">/mes</span></div>
+        <p class="price-sub">Facturado según el plan elegido</p>
+        <ul class="plan-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Acceso a todos los cursos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>2 mentorías 1 a 1 por mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Plantillas premium</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Certificado + revisión de portafolio</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary btn-block">Elegir Profesional</a>
+      </div>
+      <div class="plan reveal reveal-delay-2">
+        <h3>Premium</h3>
+        <p class="desc">Acompañamiento completo.</p>
+        <div class="price"><span class="amount" data-monthly="79" data-yearly="63">$79</span><span class="per">/mes</span></div>
+        <p class="price-sub">Facturado según el plan elegido</p>
+        <ul class="plan-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Todo lo del plan Profesional</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Mentoría semanal 1 a 1</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Revisión de código ilimitada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Acompañamiento en búsqueda laboral</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost btn-block">Elegir Premium</a>
+      </div>
+    </div>
+
+    <div class="table-scroll reveal" style="margin-top:60px;">
+      <table class="compare-table">
+        <thead><tr><th>Incluye</th><th>Básico</th><th>Profesional</th><th>Premium</th></tr></thead>
+        <tbody>
+          <tr><td>Videos y ejercicios</td><td class="yes">Sí</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+          <tr><td>Mentoría 1 a 1</td><td class="no">No</td><td class="yes">2 / mes</td><td class="yes">Semanal</td></tr>
+          <tr><td>Comunidad Discord</td><td class="yes">Sí</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+          <tr><td>Certificado</td><td class="yes">Sí</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+          <tr><td>Plantillas premium</td><td class="no">No</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+          <tr><td>Búsqueda laboral</td><td class="no">No</td><td class="no">No</td><td class="yes">Sí</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- BONOS + GARANTIA -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Bonos si comprás hoy</div>
+      <h2>Regalos por inscribirte ahora.</h2>
+    </div>
+    <div class="bonus-guarantee">
+      <div class="bonus-list reveal">
+        <div class="bonus-item"><span class="gift">🎁</span><div><strong>Pack de plantillas</strong><span>12 landing pages listas para adaptar.</span></div></div>
+        <div class="bonus-item"><span class="gift">📘</span><div><strong>Ebook "Primer Cliente"</strong><span>Guía paso a paso para tu primera propuesta.</span></div></div>
+        <div class="bonus-item"><span class="gift">🎓</span><div><strong>Mini curso extra</strong><span>Fundamentos de SEO para tus proyectos.</span></div></div>
+        <div class="bonus-item"><span class="gift">📦</span><div><strong>Recursos de diseño</strong><span>Iconos, tipografías y paletas curadas.</span></div></div>
+      </div>
+      <div class="guarantee-card reveal reveal-delay-1">
+        <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h4>Garantía de 30 días</h4>
+        <p>Si no te gusta, te devolvemos el dinero. Sin preguntas, sin letra chica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA LIMITADA -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="offer-box reveal">
+      <div>
+        <h3>Esta oferta termina pronto</h3>
+        <p>Inscribite ahora y asegurá el 20% de descuento en cualquier curso.</p>
+        <div class="offer-bar"><div class="fill"></div></div>
+      </div>
+      <div class="countdown" id="countdown">
+        <div class="cd"><div class="n" id="cdH">02</div><div class="l">Horas</div></div>
+        <div class="cd"><div class="n" id="cdM">35</div><div class="l">Min</div></div>
+        <div class="cd"><div class="n" id="cdS">18</div><div class="l">Seg</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2>Todo lo que necesitás saber.</h2>
+    </div>
+    <div id="faqList" class="reveal">
+      <div class="faq-item open">
+        <button class="faq-q">¿Necesito experiencia previa? <span class="plus">+</span></button>
+        <div class="faq-a"><p>No. El curso de Desarrollo Web desde Cero está pensado para empezar sin ningún conocimiento previo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Cómo puedo pagar? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Aceptamos tarjeta de crédito, débito, transferencia, Mercado Pago y también pago en cuotas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Los cursos dan certificado? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Sí, todos los cursos incluyen un certificado digital de finalización una vez completado el programa.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Puedo descargar el contenido? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Los archivos de proyecto y plantillas son descargables. Los videos se ven desde la plataforma.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Cuánto dura cada curso? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Entre 8 y 10 semanas trabajando unas horas por semana, aunque tenés acceso de por vida para ir a tu ritmo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Hay soporte si me quedo trabado? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Sí, contás con la comunidad de Discord y, según tu plan, mentorías 1 a 1 para resolver dudas puntuales.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Qué pasa si no me gusta el curso? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Tenés 30 días de garantía. Si sentís que no es para vos, te devolvemos el 100% del dinero.</p></div>
+      </div>
+    </div>
+
+    <div class="pay-icons reveal" style="margin-top:60px;">
+      <span>Visa</span><span>Mastercard</span><span>PayPal</span><span>Mercado Pago</span><span>Apple Pay</span><span>Google Pay</span><span>Transferencia</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contacto">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="justify-content:center;">Último paso</div>
+    <h2>¿Listo para empezar a programar de verdad?</h2>
+    <p>Sumate a los más de 350 alumnos que ya dieron el primer paso.</p>
+    <a href="#precios" class="btn btn-primary">Comprar ahora</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="mark">&lt;/&gt;</span>Compila</a>
+        <p>Cursos y mentorías de desarrollo web para pasar de cero a tu primer cliente pagado.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <a href="#servicios">Cursos</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#precios">Precios</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de reembolsos</a>
+      </div>
+      <div class="footer-col">
+        <h5>Novedades</h5>
+        <p style="margin-bottom:14px;">Recibí tips de desarrollo y avisos de nuevos cursos.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="tu@email.com" aria-label="Email">
+          <button id="newsBtn">Unirme</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Compila. Todos los derechos reservados.</span>
+      <span>hola@compila.dev</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING ELEMENTS -->
+<div class="fab-stack">
+  <button class="fab top" id="toTop" aria-label="Volver arriba">↑</button>
+  <a class="fab whats" href="https://wa.me/5491100000000" target="_blank" aria-label="WhatsApp">💬</a>
+</div>
+
+<div class="toast" id="fakeToast">
+  <span class="dot"></span>
+  <div><strong id="toastName">Juan compró el curso</strong><span id="toastTime">Hace 3 minutos</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
