@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORJA — Indumentaria Deportiva (Diseño 3)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="header">
+  <div class="header-inner container">
+    <a href="#inicio" class="logo">
+      <span class="logo-badge">FORJA</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#productos" class="nav-link">Productos</a>
+      <a href="#ubicacion" class="nav-link">Ubicación</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-diagonal" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <p class="tag-label">Indumentaria &amp; calzado deportivo</p>
+    <h1 class="hero-title">
+      NO HAY<br>
+      <span class="text-red">SEGUNDO&nbsp;LUGAR.</span>
+    </h1>
+    <p class="hero-subtitle">
+      Zapatillas, remeras y accesorios para quienes entrenan para ganar.
+      Equipamiento real, para deportistas reales.
+    </p>
+    <div class="hero-actions">
+      <a href="#productos" class="btn btn-red">Ver catálogo</a>
+      <a href="#nosotros" class="btn btn-ghost">Conocé la tienda</a>
+    </div>
+  </div>
+
+  <div class="scoreboard container" aria-label="Estadísticas de la tienda">
+    <div class="score-box">
+      <span class="score-number" data-count="12">00</span>
+      <span class="score-label">Años en el rubro</span>
+    </div>
+    <div class="score-box">
+      <span class="score-number" data-count="4800">0000</span>
+      <span class="score-label">Clientes activos</span>
+    </div>
+    <div class="score-box">
+      <span class="score-number" data-count="35">00</span>
+      <span class="score-label">Marcas disponibles</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSOTROS ===== -->
+<section class="nosotros" id="nosotros">
+  <div class="container nosotros-grid">
+    <div class="nosotros-img-wrap">
+      <div class="corner corner-tl"></div>
+      <div class="corner corner-br"></div>
+      <div class="nosotros-img-placeholder">
+        PONER IMAGEN<br><span>(foto del local / equipo)</span>
+      </div>
+    </div>
+
+    <div class="nosotros-text">
+      <p class="tag-label">Quiénes somos</p>
+      <h2 class="section-title">Armada por gente<br>que compite de verdad</h2>
+      <p class="nosotros-parrafo">
+        FORJA nació en un vestuario, no en una oficina. Empezamos vendiendo un par de zapatillas
+        entre compañeros de equipo y hoy somos referencia para quienes buscan indumentaria
+        deportiva seria, sin vueltas y a precio justo.
+      </p>
+      <p class="nosotros-parrafo">
+        Cada marca que vendemos la probamos nosotros primero: en la pista, en la cancha,
+        en el gimnasio. Si no aguanta un entrenamiento real, no entra al local.
+      </p>
+
+      <div class="record-stats">
+        <div class="record-item">
+          <span class="record-num">100%</span>
+          <span class="record-label">Productos probados</span>
+        </div>
+        <div class="record-item">
+          <span class="record-num">24h</span>
+          <span class="record-label">Respuesta por WhatsApp</span>
+        </div>
+        <div class="record-item">
+          <span class="record-num">0</span>
+          <span class="record-label">Letra chica</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTOS ===== -->
+<section class="productos" id="productos">
+  <div class="container">
+    <p class="tag-label center">Catálogo</p>
+    <h2 class="section-title center">Elegí tu equipo</h2>
+    <p class="productos-intro center">
+      Filtrá por categoría. El stock se actualiza semanalmente en el local y por WhatsApp.
+    </p>
+
+    <div class="filtros" id="filtros">
+      <button class="filtro-btn is-active" data-filter="todos">Todos</button>
+      <button class="filtro-btn" data-filter="zapatillas">Zapatillas</button>
+      <button class="filtro-btn" data-filter="remeras">Remeras</button>
+      <button class="filtro-btn" data-filter="shorts">Shorts</button>
+      <button class="filtro-btn" data-filter="accesorios">Accesorios</button>
+    </div>
+
+    <div class="productos-grid" id="productosGrid">
+
+      <article class="producto-card" data-categoria="zapatillas">
+        <span class="producto-num">01</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Zapatillas</span>
+        <h3 class="producto-nombre">Running Pro X</h3>
+        <p class="producto-desc">Amortiguación reactiva, ideales para asfalto y pista.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$89.999</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="zapatillas">
+        <span class="producto-num">02</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Zapatillas</span>
+        <h3 class="producto-nombre">Court Grip Training</h3>
+        <p class="producto-desc">Suela de alta tracción para básquet y funcional.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$76.499</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="remeras">
+        <span class="producto-num">03</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Remeras</span>
+        <h3 class="producto-nombre">Remera Dry-Fit FORJA</h3>
+        <p class="producto-desc">Tela transpirable, costuras planas anti rozadura.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$18.999</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="remeras">
+        <span class="producto-num">04</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Remeras</span>
+        <h3 class="producto-nombre">Remera Team Fit</h3>
+        <p class="producto-desc">Corte entallado deportivo, para entrenar o el día a día.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$16.499</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="shorts">
+        <span class="producto-num">05</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Shorts</span>
+        <h3 class="producto-nombre">Short Training Flex</h3>
+        <p class="producto-desc">Liviano, con malla interior y bolsillo con cierre.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$22.999</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="shorts">
+        <span class="producto-num">06</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Shorts</span>
+        <h3 class="producto-nombre">Short Running Split</h3>
+        <p class="producto-desc">Apertura lateral para máxima libertad de movimiento.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$19.999</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="accesorios">
+        <span class="producto-num">07</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Accesorios</span>
+        <h3 class="producto-nombre">Bolso Deportivo FORJA</h3>
+        <p class="producto-desc">Compartimento ventilado para calzado, resiste el agua.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$27.999</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+      <article class="producto-card" data-categoria="accesorios">
+        <span class="producto-num">08</span>
+        <div class="producto-img-placeholder">PONER IMAGEN</div>
+        <span class="producto-tag">Accesorios</span>
+        <h3 class="producto-nombre">Botella Térmica 750ml</h3>
+        <p class="producto-desc">Mantiene la temperatura hasta 12 horas.</p>
+        <div class="producto-footer">
+          <span class="producto-precio">$14.499</span>
+          <button class="btn-mini">Consultar</button>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="productos-vacio" id="productosVacio" hidden>No hay productos en esta categoría por ahora.</p>
+  </div>
+</section>
+
+<!-- ===== UBICACIÓN ===== -->
+<section class="ubicacion" id="ubicacion">
+  <div class="container ubicacion-grid">
+    <div class="ubicacion-mapa">
+      <iframe
+        title="Ubicación de FORJA en el mapa"
+        src="https://www.google.com/maps?q=Av.+del+Deporte+1234,+Buenos+Aires,+Argentina&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="ubicacion-info">
+      <p class="tag-label">Ubicación</p>
+      <h2 class="section-title">Vení a probártelo</h2>
+      <p class="ubicacion-parrafo">
+        Probate el calzado antes de comprarlo y recibí asesoramiento en persona.
+        A dos cuadras de la estación, con estacionamiento en la puerta.
+      </p>
+
+      <div class="ubicacion-direccion">
+        <span class="ubicacion-icono">📍</span>
+        <p>Av. del Deporte 1234, Buenos Aires, Argentina</p>
+      </div>
+
+      <table class="horarios">
+        <tbody>
+          <tr><td>Lunes a viernes</td><td>9:00 – 20:00</td></tr>
+          <tr><td>Sábados</td><td>9:00 – 14:00</td></tr>
+          <tr><td>Domingos</td><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ubicacion-acciones">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+del+Deporte+1234,+Buenos+Aires,+Argentina" target="_blank" rel="noopener" class="btn btn-red">Cómo llegar</a>
+        <button class="btn btn-ghost" id="copiarDireccion" type="button">Copiar dirección</button>
+      </div>
+      <p class="copiado-msg" id="copiadoMsg" role="status"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="contacto" id="contacto">
+  <div class="container contacto-grid">
+    <div class="contacto-info">
+      <p class="tag-label">Contacto</p>
+      <h2 class="section-title">Sumate al equipo</h2>
+      <p class="contacto-parrafo">
+        Escribinos por el medio que prefieras. Respondemos consultas de stock, talles
+        y envíos de lunes a sábados.
+      </p>
+
+      <ul class="contacto-lista">
+        <li>
+          <span class="contacto-icono">✉</span>
+          <div>
+            <span class="contacto-label">Email</span>
+            <a href="mailto:hola@forjadeportes.com">hola@forjadeportes.com</a>
+          </div>
+        </li>
+        <li>
+          <span class="contacto-icono">☎</span>
+          <div>
+            <span class="contacto-label">WhatsApp</span>
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="redes">
+        <a href="#" class="red-btn" aria-label="Instagram">IG</a>
+        <a href="#" class="red-btn" aria-label="Facebook">FB</a>
+        <a href="#" class="red-btn" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+
+    <form class="contacto-form" id="contactoForm" novalidate>
+      <div class="form-field">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <span class="form-error" data-error-for="nombre"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com">
+        <span class="form-error" data-error-for="email"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué estás buscando..."></textarea>
+        <span class="form-error" data-error-for="mensaje"></span>
+      </div>
+
+      <button type="submit" class="btn btn-red btn-full">Enviar mensaje</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="logo-badge footer-logo">FORJA</span>
+    <p class="footer-texto">© 2026 FORJA Indumentaria Deportiva. Todos los derechos reservados.</p>
+    <a href="#inicio" class="footer-top">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
