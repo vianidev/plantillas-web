@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORTE — Camperas técnicas para el frío real</title>
+<meta name="description" content="Camperas técnicas, parkas y camperas de cuero. Guía de abrigo por temperatura. Envíos en Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">NORTE<span class="logo-dot">°</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#guia">Guía de abrigo</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="btn btn-ice" href="https://wa.me/5491100000000?text=Hola%20NORTE%2C%20quiero%20consultar%20por%20una%20campera" target="_blank" rel="noopener">
+      Consultar por WhatsApp
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Camperas técnicas · Buenos Aires</p>
+        <h1>Hechas para<br>el frío real<span class="dot-ember">.</span></h1>
+        <p class="hero-text">
+          Diseñamos camperas probadas en condiciones reales: viento, lluvia
+          y noches de invierno porteño. Cada modelo indica el rango de
+          temperatura para el que está pensado, así elegís sin adivinar.
+        </p>
+        <div class="hero-actions">
+          <a href="#guia" class="btn btn-ember">Encontrar mi campera</a>
+          <a href="#catalogo" class="btn btn-outline">Ver catálogo</a>
+        </div>
+        <ul class="hero-specs">
+          <li><strong>−10° a 20°C</strong> rango cubierto</li>
+          <li><strong>100%</strong> costuras selladas</li>
+          <li><strong>Cambios</strong> hasta 30 días</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" style="--delay:.15s">
+        <div class="frame">
+          <img src="https://picsum.photos/seed/norte-hero/760/900" alt="Campera técnica NORTE sobre fondo urbano de invierno" loading="eager">
+        </div>
+        <div class="tag-float">
+          <span class="tag-line">RANGO TÉRMICO</span>
+          <span class="tag-value">−5° / 8°C</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP DE SPECS -->
+  <section class="strip">
+    <div class="wrap strip-inner">
+      <div class="strip-item reveal">
+        <span class="strip-tag">IMPERMEABLE</span>
+        <p>Costuras termoselladas, no dejan pasar agua ni viento</p>
+      </div>
+      <div class="strip-item reveal" style="--delay:.08s">
+        <span class="strip-tag">TESTEADO</span>
+        <p>Cada modelo se prueba en frío real antes de salir a la venta</p>
+      </div>
+      <div class="strip-item reveal" style="--delay:.16s">
+        <span class="strip-tag">GARANTÍA</span>
+        <p>12 meses de garantía en costuras, cierres y cordones</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUÍA DE ABRIGO -->
+  <section id="guia" class="section guia">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Guía rápida</p>
+        <h2>¿A cuánto vas a<br>estar expuesto?</h2>
+        <p class="section-sub">Movés el control a la temperatura del día y te marcamos qué campera del catálogo te sirve.</p>
+      </div>
+
+      <div class="guia-tool reveal" style="--delay:.1s">
+        <div class="guia-readout">
+          <span class="guia-readout-label">Temperatura estimada</span>
+          <span class="guia-readout-value" id="tempValue">5°C</span>
+        </div>
+        <input type="range" id="tempSlider" min="-10" max="20" value="5" step="1" aria-label="Seleccionar temperatura">
+        <div class="guia-scale">
+          <span>−10°C</span>
+          <span>20°C</span>
+        </div>
+        <p class="guia-result" id="guiaResult">Ajustá el control para ver las camperas recomendadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO -->
+  <section id="catalogo" class="section catalogo">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Camperas<br>disponibles</h2>
+        <p class="section-sub">El rango térmico es orientativo: sumá o restá capas debajo según la actividad.</p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <article class="product-card reveal" data-min="-10" data-max="0">
+          <div class="frame small">
+            <img src="https://picsum.photos/seed/norte-parka/520/560" alt="Parka Ártica Plumón" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Parka Ártica Plumón</h3>
+              <span class="price">$89.900</span>
+            </div>
+            <p class="product-tag">Relleno de plumón · capucha desmontable</p>
+            <div class="warmth-gauge">
+              <div class="warmth-fill" style="left:0%; width:33.3%;"></div>
+            </div>
+            <p class="warmth-range">−10° a 0°C</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Parka%20%C3%81rtica%20Plum%C3%B3n" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.06s" data-min="-5" data-max="8">
+          <div class="frame small">
+            <img src="https://picsum.photos/seed/norte-tecnica/520/560" alt="Campera Técnica Impermeable" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Técnica Impermeable</h3>
+              <span class="price">$72.500</span>
+            </div>
+            <p class="product-tag">Costuras selladas · corte regular</p>
+            <div class="warmth-gauge">
+              <div class="warmth-fill" style="left:16.7%; width:43.3%;"></div>
+            </div>
+            <p class="warmth-range">−5° a 8°C</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Campera%20T%C3%A9cnica%20Impermeable" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.12s" data-min="0" data-max="12">
+          <div class="frame small">
+            <img src="https://picsum.photos/seed/norte-cuero/520/560" alt="Campera de Cuero Biker" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Cuero Biker</h3>
+              <span class="price">$95.000</span>
+            </div>
+            <p class="product-tag">Cuero genuino · forro interior</p>
+            <div class="warmth-gauge">
+              <div class="warmth-fill" style="left:33.3%; width:40%;"></div>
+            </div>
+            <p class="warmth-range">0° a 12°C</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Campera%20de%20Cuero%20Biker" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.18s" data-min="5" data-max="18">
+          <div class="frame small">
+            <img src="https://picsum.photos/seed/norte-rompeviento/520/560" alt="Rompeviento Ultraligero" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Rompeviento Ultraligero</h3>
+              <span class="price">$38.000</span>
+            </div>
+            <p class="product-tag">Se guarda en su propio bolsillo · 210g</p>
+            <div class="warmth-gauge">
+              <div class="warmth-fill" style="left:50%; width:43.3%;"></div>
+            </div>
+            <p class="warmth-range">5° a 18°C</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20el%20Rompeviento%20Ultraligero" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.24s" data-min="-2" data-max="10">
+          <div class="frame small">
+            <img src="https://picsum.photos/seed/norte-acolchada/520/560" alt="Campera Acolchada Urbana" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Acolchada Urbana</h3>
+              <span class="price">$64.900</span>
+            </div>
+            <p class="product-tag">Guata térmica · corte entallado</p>
+            <div class="warmth-gauge">
+              <div class="warmth-fill" style="left:26.7%; width:40%;"></div>
+            </div>
+            <p class="warmth-range">−2° a 10°C</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Campera%20Acolchada%20Urbana" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.3s" data-min="8" data-max="20">
+          <div class="frame small">
+            <img src="https://picsum.photos/seed/norte-polar/520/560" alt="Campera Polar Fleece" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Polar Fleece</h3>
+              <span class="price">$42.500</span>
+            </div>
+            <p class="product-tag">Ideal como capa media o campera liviana</p>
+            <div class="warmth-gauge">
+              <div class="warmth-fill" style="left:60%; width:40%;"></div>
+            </div>
+            <p class="warmth-range">8° a 20°C</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Campera%20Polar%20Fleece" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section nosotros">
+    <div class="wrap nosotros-inner">
+      <div class="nosotros-visual reveal">
+        <div class="frame">
+          <img src="https://picsum.photos/seed/norte-taller/640/760" alt="Taller de confección de camperas NORTE" loading="lazy">
+        </div>
+      </div>
+      <div class="nosotros-copy reveal" style="--delay:.1s">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2>Diseñadas y<br>probadas acá</h2>
+        <p>
+          Empezamos haciendo camperas para ciclistas urbanos que necesitaban
+          algo que aguantara la lluvia y el viento de verdad. Hoy ese mismo
+          criterio técnico se aplica a todo el catálogo: cada campera se
+          prueba a la intemperie antes de ponerle precio.
+        </p>
+        <div class="mini-stats">
+          <div>
+            <span class="mini-num">6</span>
+            <span class="mini-label">modelos en catálogo</span>
+          </div>
+          <div>
+            <span class="mini-num">30d</span>
+            <span class="mini-label">de cambio garantizado</span>
+          </div>
+          <div>
+            <span class="mini-num">−10°</span>
+            <span class="mini-label">mínima testeada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="wrap contacto-inner">
+      <div class="reveal">
+        <p class="eyebrow">Consultas y pedidos</p>
+        <h2>Contanos qué<br>estás buscando</h2>
+        <p class="section-sub">Completá el formulario con el modelo y tu talle. Te respondemos por WhatsApp para coordinar el envío o el retiro.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">WhatsApp</span>
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+          </li>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:hola@norte.com.ar">hola@norte.com.ar</a>
+          </li>
+          <li>
+            <span class="contact-label">Horario</span>
+            <span>Lunes a sábados, 11 a 20 h</span>
+          </li>
+        </ul>
+
+        <div class="social-row">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="order-form reveal" id="orderForm" style="--delay:.1s" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="11 0000 0000" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="producto">Modelo</label>
+            <select id="producto" name="producto" required>
+              <option value="" disabled selected>Elegí un modelo</option>
+              <option>Parka Ártica Plumón</option>
+              <option>Técnica Impermeable</option>
+              <option>Cuero Biker</option>
+              <option>Rompeviento Ultraligero</option>
+              <option>Acolchada Urbana</option>
+              <option>Polar Fleece</option>
+              <option>No estoy seguro / quiero asesoramiento</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="talle">Talle</label>
+            <select id="talle" name="talle">
+              <option value="" disabled selected>Talle</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>No sé / asesorame</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Color preferido, dirección de entrega, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-ember btn-block">Enviar consulta por WhatsApp</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="section ubicacion">
+    <div class="wrap ubicacion-inner">
+      <div class="reveal">
+        <p class="eyebrow">Dónde estamos</p>
+        <h2>Showroom y<br>retiro en Palermo</h2>
+        <p class="section-sub">
+          Gorriti 4567, Palermo, CABA. Retirá tu compra en el showroom o
+          coordiná envío a domicilio dentro de CABA y GBA.
+        </p>
+        <a class="btn btn-outline" href="https://maps.google.com/?q=Gorriti+4567,+CABA" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+      </div>
+      <div class="map-frame reveal" style="--delay:.1s">
+        <iframe
+          title="Ubicación NORTE"
+          src="https://maps.google.com/maps?q=Gorriti%204567%2C%20CABA&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="logo">NORTE<span class="logo-dot">°</span></a>
+    <p>© <span id="year"></span> NORTE — Camperas técnicas. Diseñadas en Buenos Aires.</p>
+    <div class="social-row">
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

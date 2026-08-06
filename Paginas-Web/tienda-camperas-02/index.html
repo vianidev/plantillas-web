@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRUDO — Camperas</title>
+<meta name="description" content="Camperas CRUDO. Sin catálogo de fotos, con toda la info técnica y de talles que necesitás. Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ícono de campera reutilizable, dibujado en línea (sin fotos) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="icon-jacket" viewBox="0 0 100 120">
+    <path d="M50 8 L39 17 L30 13 L13 24 L13 45 L24 49 L24 110 L76 110 L76 49 L87 45 L87 24 L70 13 L61 17 Z" />
+    <path d="M39 17 L50 31 L61 17" />
+    <line x1="50" y1="31" x2="50" y2="106"></line>
+    <rect x="27" y="72" width="17" height="21" rx="2"></rect>
+    <rect x="56" y="72" width="17" height="21" rx="2"></rect>
+  </symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">CRUDO<span class="logo-dot">.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#talles">Talles</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#ubicacion">Local</a>
+    </nav>
+
+    <a class="btn btn-solid" href="https://wa.me/5491100000000?text=Hola%20CRUDO%2C%20quiero%20consultar%20por%20una%20campera" target="_blank" rel="noopener">
+      Consultar
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Drop permanente · 6 modelos</p>
+        <h1>Camperas sin<br>vueltas<span class="dot-accent">.</span></h1>
+        <p class="hero-text">
+          Nada de catálogo con modelos posando: te contamos la tela, el
+          relleno, cómo se lava y qué talle te queda. Lo que necesitás
+          saber antes de comprar una campera, sin relleno de marketing.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-solid">Ver catálogo</a>
+          <a href="#talles" class="btn btn-outline">Guía de talles</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" style="--delay:.15s">
+        <div class="hero-icon-block">
+          <svg class="hero-icon" viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+        </div>
+        <div class="hero-note">
+          <span class="hero-note-label">Sin fotos de stock</span>
+          <span class="hero-note-text">La info manda, no la puesta en escena.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <section class="strip">
+    <div class="wrap strip-inner">
+      <div class="strip-item reveal">
+        <span class="strip-tag">01</span>
+        <p>Ficha técnica completa en cada modelo: tela, relleno, cierre</p>
+      </div>
+      <div class="strip-item reveal" style="--delay:.08s">
+        <span class="strip-tag">02</span>
+        <p>Guía de talles con medidas reales, no numeración genérica</p>
+      </div>
+      <div class="strip-item reveal" style="--delay:.16s">
+        <span class="strip-tag">03</span>
+        <p>Cambio gratis si el talle no es el que pensabas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO -->
+  <section id="catalogo" class="section catalogo">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Seis modelos,<br>ficha técnica completa</h2>
+        <p class="section-sub">Cada tarjeta trae la info que normalmente tenés que preguntar por chat.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <article class="product-card reveal">
+          <div class="product-icon icon-cobalto">
+            <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+          </div>
+          <div class="product-info">
+            <span class="product-num">Modelo 01</span>
+            <div class="product-top">
+              <h3>Parka Heavy</h3>
+              <span class="price">$92.000</span>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Tela</dt><dd>Algodón engomado</dd></div>
+              <div><dt>Relleno</dt><dd>Guata + forro polar</dd></div>
+              <div><dt>Cierre</dt><dd>Metálico + botones a presión</dd></div>
+            </dl>
+            <div class="talle-chips">
+              <span>S</span><span>M</span><span>L</span><span>XL</span>
+            </div>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Parka%20Heavy" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.06s">
+          <div class="product-icon icon-rojo">
+            <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+          </div>
+          <div class="product-info">
+            <span class="product-num">Modelo 02</span>
+            <div class="product-top">
+              <h3>Cuero Crudo</h3>
+              <span class="price">$110.000</span>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Tela</dt><dd>Cuero vacuno sin tratar</dd></div>
+              <div><dt>Relleno</dt><dd>Forro de algodón</dd></div>
+              <div><dt>Cierre</dt><dd>Cremallera YKK</dd></div>
+            </dl>
+            <div class="talle-chips">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Campera%20Cuero%20Crudo" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.12s">
+          <div class="product-icon icon-cobalto">
+            <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+          </div>
+          <div class="product-info">
+            <span class="product-num">Modelo 03</span>
+            <div class="product-top">
+              <h3>Windbreaker Raw</h3>
+              <span class="price">$41.000</span>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Tela</dt><dd>Nylon ripstop</dd></div>
+              <div><dt>Relleno</dt><dd>Sin relleno, corte suelto</dd></div>
+              <div><dt>Cierre</dt><dd>Cremallera + capucha plegable</dd></div>
+            </dl>
+            <div class="talle-chips">
+              <span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span>
+            </div>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20el%20Windbreaker%20Raw" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.18s">
+          <div class="product-icon icon-rojo">
+            <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+          </div>
+          <div class="product-info">
+            <span class="product-num">Modelo 04</span>
+            <div class="product-top">
+              <h3>Bomber Acolchada</h3>
+              <span class="price">$68.500</span>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Tela</dt><dd>Poliéster mate</dd></div>
+              <div><dt>Relleno</dt><dd>Guata térmica</dd></div>
+              <div><dt>Cierre</dt><dd>Cremallera + puños elásticos</dd></div>
+            </dl>
+            <div class="talle-chips">
+              <span>S</span><span>M</span><span>L</span><span>XL</span>
+            </div>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Bomber%20Acolchada" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.24s">
+          <div class="product-icon icon-cobalto">
+            <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+          </div>
+          <div class="product-info">
+            <span class="product-num">Modelo 05</span>
+            <div class="product-top">
+              <h3>Trucker Denim Forrada</h3>
+              <span class="price">$58.900</span>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Tela</dt><dd>Denim rígido 14oz</dd></div>
+              <div><dt>Relleno</dt><dd>Forro sherpa</dd></div>
+              <div><dt>Cierre</dt><dd>Botones metálicos</dd></div>
+            </dl>
+            <div class="talle-chips">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20la%20Trucker%20Denim%20Forrada" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.3s">
+          <div class="product-icon icon-rojo">
+            <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#icon-jacket"></use></svg>
+          </div>
+          <div class="product-info">
+            <span class="product-num">Modelo 06</span>
+            <div class="product-top">
+              <h3>Anorak Técnico</h3>
+              <span class="price">$76.400</span>
+            </div>
+            <dl class="spec-list">
+              <div><dt>Tela</dt><dd>Nylon con membrana</dd></div>
+              <div><dt>Relleno</dt><dd>Malla técnica</dd></div>
+              <div><dt>Cierre</dt><dd>Capucha fija + costuras selladas</dd></div>
+            </dl>
+            <div class="talle-chips">
+              <span>S</span><span>M</span><span>L</span><span>XL</span>
+            </div>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20el%20Anorak%20T%C3%A9cnico" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIA DE TALLES -->
+  <section id="talles" class="section talles">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Guía de talles</p>
+        <h2>Medite antes<br>de pedir</h2>
+        <p class="section-sub">Medidas en centímetros, tomadas prenda extendida. Si estás entre dos talles, elegí el más grande.</p>
+      </div>
+
+      <div class="table-wrap reveal" style="--delay:.1s">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Talle</th>
+              <th>Pecho</th>
+              <th>Largo</th>
+              <th>Manga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>XS</td><td>96</td><td>64</td><td>60</td></tr>
+            <tr><td>S</td><td>102</td><td>66</td><td>61</td></tr>
+            <tr><td>M</td><td>108</td><td>68</td><td>62</td></tr>
+            <tr><td>L</td><td>114</td><td>70</td><td>63</td></tr>
+            <tr><td>XL</td><td>120</td><td>72</td><td>64</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="wrap contacto-inner">
+      <div class="reveal">
+        <p class="eyebrow">Consultas y pedidos</p>
+        <h2>Escribinos,<br>no mordemos</h2>
+        <p class="section-sub">Completá el formulario y te contestamos por WhatsApp con disponibilidad real.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">WhatsApp</span>
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+          </li>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:hola@crudo.com.ar">hola@crudo.com.ar</a>
+          </li>
+          <li>
+            <span class="contact-label">Horario</span>
+            <span>Lunes a sábados, 11 a 20 h</span>
+          </li>
+        </ul>
+
+        <div class="social-row">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="order-form reveal" id="orderForm" style="--delay:.1s" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="11 0000 0000" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="producto">Modelo</label>
+            <select id="producto" name="producto" required>
+              <option value="" disabled selected>Elegí un modelo</option>
+              <option>Parka Heavy</option>
+              <option>Cuero Crudo</option>
+              <option>Windbreaker Raw</option>
+              <option>Bomber Acolchada</option>
+              <option>Trucker Denim Forrada</option>
+              <option>Anorak Técnico</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="talle">Talle</label>
+            <select id="talle" name="talle">
+              <option value="" disabled selected>Talle</option>
+              <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
+              <option>No sé / asesorame</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Dirección de entrega, dudas de talle, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid btn-block">Enviar consulta por WhatsApp</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="section ubicacion">
+    <div class="wrap ubicacion-inner">
+      <div class="reveal">
+        <p class="eyebrow">Dónde estamos</p>
+        <h2>Local de<br>retiro</h2>
+        <p class="section-sub">
+          Costa Rica 5678, Palermo, CABA. Retirá tu compra en el local o
+          coordiná el envío a domicilio dentro de CABA y GBA.
+        </p>
+        <a class="btn btn-outline" href="https://maps.google.com/?q=Costa+Rica+5678,+CABA" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+      </div>
+      <div class="map-frame reveal" style="--delay:.1s">
+        <iframe
+          title="Ubicación CRUDO"
+          src="https://maps.google.com/maps?q=Costa%20Rica%205678%2C%20CABA&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="logo">CRUDO<span class="logo-dot">.</span></a>
+    <p>© <span id="year"></span> CRUDO — Camperas. Hecho en Buenos Aires.</p>
+    <div class="social-row">
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
