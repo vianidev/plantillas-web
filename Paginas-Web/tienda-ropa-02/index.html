@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[NOMBRE DEL SHOWROOM] — Lookbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-row">
+    <div class="header-left">
+      <button class="hamburger" id="navOpen" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header-nav-inline">
+        <a href="#destacados">Colecciones</a>
+        <a href="#marca">Editorial</a>
+        <a href="#showroom">Contacto</a>
+      </nav>
+    </div>
+    <div class="logo-center">[NOMBRE DEL SHOWROOM]</div>
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" id="bagToggle" aria-label="Bolsa de compras">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+        <span class="bag-count" id="bagCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay de navegación fullscreen -->
+<nav class="nav-overlay" id="navOverlay">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="16" height="16"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#destacados">Colecciones</a>
+  <a href="#marca">Editorial</a>
+  <a href="#showroom">Contacto</a>
+</nav>
+
+<!-- ===================== HERO SLIDER ===================== -->
+<section class="hero-slider" id="heroSlider">
+  <div class="slide active">
+    <div class="slide-frame"></div>
+    <div class="slide-label">[ VIDEO O IMAGEN DE CAMPAÑA 01 — sin sonido, loop ]</div>
+    <div class="slide-scrim"></div>
+  </div>
+  <div class="slide">
+    <div class="slide-frame"></div>
+    <div class="slide-label">[ IMAGEN DE CAMPAÑA 02 ]</div>
+    <div class="slide-scrim"></div>
+  </div>
+  <div class="slide">
+    <div class="slide-frame"></div>
+    <div class="slide-label">[ IMAGEN DE CAMPAÑA 03 ]</div>
+    <div class="slide-scrim"></div>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow">Campaña — [nombre de la temporada]</p>
+    <h1 class="serif">[Frase corta de campaña] <em>[palabra clave]</em></h1>
+    <a href="#destacados" class="hero-cta">Ver editorial →</a>
+  </div>
+
+  <div class="slider-dots" id="sliderDots"></div>
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<!-- ===================== DESTACADOS ===================== -->
+<section class="section-pad" id="destacados">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:.6rem;">Destacados de la semana</p>
+        <h2 class="serif">Total looks, no prendas sueltas</h2>
+      </div>
+      <div class="collection-filters" id="collectionFilters">
+        <button class="filter-chip active" data-coll="todas">Todas</button>
+        <button class="filter-chip" data-coll="capsula">Cápsula 01</button>
+        <button class="filter-chip" data-coll="otono">Otoño [año]</button>
+        <button class="filter-chip" data-coll="total-black">Total Black</button>
+      </div>
+    </div>
+
+    <div class="looks-grid" id="looksGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE LA MARCA ===================== -->
+<section class="section-pad" id="marca" style="background:var(--panel); border-top:1px solid var(--hair); border-bottom:1px solid var(--hair);">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <p class="eyebrow">Sobre la marca</p>
+      <blockquote class="pull-quote serif">"[Poner aquí una frase corta que resuma la filosofía de la marca]"</blockquote>
+      <p class="body-copy">Poner aquí un párrafo breve contando el origen de la marca, qué la inspira y cómo trabaja cada prenda. Enfocado en conectar emocionalmente, no en especificaciones técnicas.</p>
+    </div>
+    <div>
+      <div class="about-photo-frame">
+        <div class="about-photo">[ FOTO DEL LOCAL O TALLER — reemplazar ]</div>
+      </div>
+      <p class="fig-caption"><span>FIG. 01</span> [Poner aquí una breve leyenda: taller, ciudad, año]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SHOP THE LOOK ===================== -->
+<section class="section-pad" id="shop-the-look">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:.6rem;">Shop the look</p>
+        <h2 class="serif">Pasá el cursor, elegí la pieza</h2>
+      </div>
+    </div>
+
+    <div class="stl-photo-wrap">
+      <div class="stl-photo">[ FOTO EDITORIAL DEL LOOK COMPLETO — reemplazar ]</div>
+      <button class="hotspot" style="top:28%; left:38%;" data-hotspot="1">1</button>
+      <button class="hotspot" style="top:52%; left:58%;" data-hotspot="2">2</button>
+      <button class="hotspot" style="top:78%; left:44%;" data-hotspot="3">3</button>
+
+      <div class="hotspot-card" id="hcard-1" style="top:22%; left:44%;">
+        <p class="name serif">[Nombre conceptual de la prenda]</p>
+        <p class="price mono">Ver precio en el detalle</p>
+        <button data-quickview="1">Ver detalle →</button>
+      </div>
+      <div class="hotspot-card" id="hcard-2" style="top:46%; left:64%;">
+        <p class="name serif">[Nombre conceptual de la prenda]</p>
+        <p class="price mono">Ver precio en el detalle</p>
+        <button data-quickview="2">Ver detalle →</button>
+      </div>
+      <div class="hotspot-card" id="hcard-3" style="top:72%; left:50%;">
+        <p class="name serif">[Nombre conceptual de la prenda]</p>
+        <p class="price mono">Ver precio en el detalle</p>
+        <button data-quickview="3">Ver detalle →</button>
+      </div>
+    </div>
+    <p class="fig-caption"><span>FIG. 02</span> Tocá o pasá el cursor sobre los puntos para ver cada pieza del look.</p>
+  </div>
+</section>
+
+<!-- ===================== SHOWROOM ===================== -->
+<section class="section-pad" id="showroom" style="background:var(--panel); border-top:1px solid var(--hair);">
+  <div class="wrap">
+    <p class="eyebrow" style="margin-bottom:.6rem;">Visitá nuestro showroom</p>
+    <h2 class="serif" style="margin-bottom:2rem; font-size:clamp(1.8rem,3.4vw,2.6rem);">El espacio, en persona</h2>
+
+    <div class="showroom-gallery">
+      <div class="showroom-photo">[ FOTO INTERIOR 01 ]</div>
+      <div class="showroom-photo">[ FOTO INTERIOR 02 ]</div>
+      <div class="showroom-photo">[ FOTO INTERIOR 03 ]</div>
+    </div>
+
+    <div class="showroom-info">
+      <div class="showroom-details">
+        <p>[Poner aquí la dirección completa del showroom]</p>
+        <p>[Poner aquí el horario de atención]</p>
+        <p>[Poner aquí si se atiende con cita previa o de forma libre]</p>
+        <span class="mono">[Poner aquí el teléfono / WhatsApp de contacto]</span>
+      </div>
+      <iframe class="map-frame" title="Ubicación del showroom"
+        src="https://www.google.com/maps?q=Buenos%20Aires&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-center serif">[Nombre del showroom]</div>
+        <p>[Poner aquí una breve descripción de marca, tono íntimo, una o dos líneas]</p>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+
+      <div class="insta-feed">
+        <h4>@[usuario_instagram]</h4>
+        <div class="insta-grid">
+          <div class="insta-tile"></div><div class="insta-tile"></div><div class="insta-tile"></div>
+          <div class="insta-tile"></div><div class="insta-tile"></div><div class="insta-tile"></div>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h4>Newsletter</h4>
+        <p class="lead">Sumate y llevate [poner % de descuento] en tu primera compra.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="tu@email.com" required aria-label="Email para newsletter">
+          <button type="submit">Unirme →</button>
+        </form>
+        <p class="newsletter-msg" id="newsletterMsg"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 [Nombre del showroom]. Plantilla de uso libre.</span>
+      <span>Soporte: [poner email o WhatsApp de atención]</span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ===================== BOLSA ===================== -->
+<aside class="bag-drawer" id="bagDrawer" aria-label="Bolsa de compras">
+  <div class="bag-head">
+    <h3>Tu bolsa</h3>
+    <button class="icon-btn" id="closeBag" aria-label="Cerrar bolsa">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="14" height="14"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="bag-items" id="bagItems">
+    <p class="bag-empty">Todavía no agregaste piezas.</p>
+  </div>
+  <div class="bag-foot">
+    <div class="bag-total-row"><span>Total</span><span id="bagTotal">$0</span></div>
+    <a href="#" class="qv-add-btn" style="display:block;">Finalizar compra</a>
+  </div>
+</aside>
+
+<!-- ===================== QUICK VIEW MODAL ===================== -->
+<div class="qv-modal" id="qvModal">
+  <div class="qv-panel" role="dialog" aria-modal="true">
+    <button class="qv-close" id="qvClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="14" height="14"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="qv-gallery">
+      <div class="qv-main-photo" id="qvMainPhoto">[ FOTO DEL LOOK — reemplazar ]</div>
+      <div class="qv-thumbs" id="qvThumbs"></div>
+    </div>
+    <div class="qv-details">
+      <p class="eyebrow" id="qvCollection">COLECCIÓN</p>
+      <h2 id="qvName">[Nombre conceptual de la prenda]</h2>
+      <p class="qv-price" id="qvPrice">$0</p>
+
+      <div class="qv-section">
+        <h4>Talle</h4>
+        <div class="qv-sizes" id="qvSizes"></div>
+      </div>
+      <div class="qv-section">
+        <h4>Color</h4>
+        <div class="qv-colors" id="qvColors"></div>
+      </div>
+      <div class="qv-section">
+        <h4>Calce y caída</h4>
+        <p>Poner aquí cómo calza la prenda, la caída del textil y en qué talle recomendás pedir si dudás entre dos.</p>
+      </div>
+      <div class="qv-section">
+        <h4>Cómo combinarla</h4>
+        <p>[Poner aquí sugerencias de combinación con otras piezas de la colección]</p>
+      </div>
+
+      <button class="qv-add-btn" id="qvAddBtn">Agregar a la bolsa</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Agregado a la bolsa</div>
+
+<script src="script.js"></script>
+</body>
+</html>
