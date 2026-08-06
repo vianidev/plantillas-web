@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESTELA — Perfumes que dejan estela</title>
+<meta name="description" content="ESTELA: perfumes de autor por familia olfativa — floral, amaderado, cítrico, oriental y acuático. Composición, pirámide de notas y perfilado personalizado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M15 12 L25 12 L25 17 L28 20 L28 34 L12 34 L12 20 L15 17 Z" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M17 8 L23 8 L23 12 L17 12 Z" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </span>
+      <span class="brand-name">Estela</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#coleccion">Colección</a>
+      <a href="#notas">Pirámide de notas</a>
+      <a href="#atelier">El perfumista</a>
+      <a href="#testimonios">Diario olfativo</a>
+      <a href="#contacto" class="nav-cta">Perfilado gratis</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-block" aria-hidden="true">
+      <div class="hero-trail" id="heroTrail"></div>
+      <svg class="hero-bottle" viewBox="0 0 220 320" fill="none">
+        <path d="M78 70 L142 70 L142 96 L158 118 L158 290 L62 290 L62 118 L78 96 Z" stroke="currentColor" stroke-width="1.3"/>
+        <path d="M88 40 L132 40 L132 70 L88 70 Z" stroke="currentColor" stroke-width="1.3"/>
+        <path d="M62 150 L158 150" stroke="currentColor" stroke-width=".6"/>
+        <path d="M96 25 L124 25 L124 40 L96 40 Z" stroke="currentColor" stroke-width="1.1"/>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <p class="eyebrow reveal">Perfumería de autor</p>
+      <h1 class="reveal">Un perfume<br>no se <em>usa</em>,<br>se deja atrás.</h1>
+      <p class="hero-lead reveal">
+        Componemos cada fragancia por capas —salida, corazón y fondo— para que lo
+        que quede en el aire, después de que te fuiste, siga contando algo de vos.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#coleccion" class="btn btn-primary"><span>Ver colección</span></a>
+        <a href="#notas" class="btn btn-ghost">Cómo se compone un perfume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLECCIÓN ============ -->
+  <section class="collection" id="coleccion">
+    <div class="section-head reveal">
+      <p class="eyebrow">La colección</p>
+      <h2>Cinco familias, una estela distinta cada vez</h2>
+    </div>
+
+    <div class="filters reveal" role="tablist" aria-label="Filtrar por familia olfativa">
+      <button class="filter-btn is-active" data-filter="todas" role="tab" aria-selected="true">Todas</button>
+      <button class="filter-btn" data-filter="floral" role="tab" aria-selected="false">Floral</button>
+      <button class="filter-btn" data-filter="amaderado" role="tab" aria-selected="false">Amaderado</button>
+      <button class="filter-btn" data-filter="citrico" role="tab" aria-selected="false">Cítrico</button>
+      <button class="filter-btn" data-filter="oriental" role="tab" aria-selected="false">Oriental</button>
+      <button class="filter-btn" data-filter="acuatico" role="tab" aria-selected="false">Acuático</button>
+    </div>
+
+    <div class="perfume-grid" id="perfumeGrid">
+
+      <!-- FLORAL -->
+      <article class="perfume-card reveal" data-category="floral">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M55 50 L105 50 L105 68 L118 84 L118 200 L42 200 L42 84 L55 68 Z" stroke="currentColor" stroke-width="1.2"/><path d="M62 28 L98 28 L98 50 L62 50 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Floral</p>
+          <h3>Jazmín Nocturno</h3>
+          <p class="perfume-desc">Un ramo blanco abierto de noche: jazmín y azahar sobre una base cálida de almizcle.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> bergamota, pimienta rosa</span>
+            <span><b>Corazón</b> jazmín, azahar</span>
+            <span><b>Fondo</b> almizcle, sándalo</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$62.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="floral">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M50 55 L110 55 L110 72 L124 90 L124 195 L36 195 L36 90 L50 72 Z" stroke="currentColor" stroke-width="1.2"/><path d="M66 32 L94 32 L94 55 L66 55 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Floral</p>
+          <h3>Peonía Cruda</h3>
+          <p class="perfume-desc">Peonía recién cortada, todavía con tierra: verde, un poco áspera, nada dulzona.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> hoja de violeta, pera</span>
+            <span><b>Corazón</b> peonía, rosa té</span>
+            <span><b>Fondo</b> cedro, musgo blanco</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$58.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="floral">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M58 48 L102 48 L102 66 L114 82 L114 198 L46 198 L46 82 L58 66 Z" stroke="currentColor" stroke-width="1.2"/><path d="M70 26 L90 26 L90 48 L70 48 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Floral</p>
+          <h3>Tuberosa Blanca</h3>
+          <p class="perfume-desc">Tuberosa carnosa y cerosa, la flor más intensa del ramo, suavizada con vainilla clara.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> mandarina, jengibre</span>
+            <span><b>Corazón</b> tuberosa, ylang-ylang</span>
+            <span><b>Fondo</b> vainilla, haba tonka</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$65.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <!-- AMADERADO -->
+      <article class="perfume-card reveal" data-category="amaderado">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M52 52 L108 52 L108 70 L120 86 L120 196 L40 196 L40 86 L52 70 Z" stroke="currentColor" stroke-width="1.2"/><path d="M64 30 L96 30 L96 52 L64 52 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Amaderado</p>
+          <h3>Cedro de Monte</h3>
+          <p class="perfume-desc">Madera recién cortada, resina y un fondo ahumado. Para los que no usan perfume "de flores".</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> pomelo, cardamomo</span>
+            <span><b>Corazón</b> ciprés, incienso</span>
+            <span><b>Fondo</b> cedro, vetiver</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$67.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="amaderado">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M50 50 L110 50 L110 68 L122 84 L122 194 L38 194 L38 84 L50 68 Z" stroke="currentColor" stroke-width="1.2"/><path d="M62 28 L98 28 L98 50 L62 50 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Amaderado</p>
+          <h3>Roble y Sal</h3>
+          <p class="perfume-desc">Un aroma a barrica vieja cerca del mar: roble, notas marinas y un toque final de tabaco.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> notas marinas, limón</span>
+            <span><b>Corazón</b> lavanda, pimienta negra</span>
+            <span><b>Fondo</b> roble, tabaco</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$70.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="amaderado">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M56 54 L104 54 L104 72 L116 88 L116 197 L44 197 L44 88 L56 72 Z" stroke="currentColor" stroke-width="1.2"/><path d="M68 32 L92 32 L92 54 L68 54 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Amaderado</p>
+          <h3>Sándalo Crudo</h3>
+          <p class="perfume-desc">Sándalo cremoso sin pulir, con un fondo de cuero que aparece recién a la hora.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> canela, naranja</span>
+            <span><b>Corazón</b> sándalo, iris</span>
+            <span><b>Fondo</b> cuero, ámbar gris</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$74.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <!-- CÍTRICO -->
+      <article class="perfume-card reveal" data-category="citrico">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M54 46 L106 46 L106 64 L118 80 L118 195 L42 195 L42 80 L54 64 Z" stroke="currentColor" stroke-width="1.2"/><path d="M66 24 L94 24 L94 46 L66 46 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Cítrico</p>
+          <h3>Pomelo de Enero</h3>
+          <p class="perfume-desc">Cáscara de pomelo recién exprimida, fresca y un poco amarga, sin nada de dulzor.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> pomelo, menta</span>
+            <span><b>Corazón</b> té verde, jengibre</span>
+            <span><b>Fondo</b> almizcle blanco</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$54.000</span><span class="ml">50 ml EDT</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="citrico">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M52 50 L108 50 L108 68 L120 84 L120 198 L40 198 L40 84 L52 68 Z" stroke="currentColor" stroke-width="1.2"/><path d="M64 28 L96 28 L96 50 L64 50 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Cítrico</p>
+          <h3>Bergamota Cruda</h3>
+          <p class="perfume-desc">Bergamota de Calabria sin endulzar, con un fondo verde de albahaca recién cortada.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> bergamota, limón</span>
+            <span><b>Corazón</b> albahaca, geranio</span>
+            <span><b>Fondo</b> vetiver claro</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$56.000</span><span class="ml">50 ml EDT</span></div>
+        </div>
+      </article>
+
+      <!-- ORIENTAL -->
+      <article class="perfume-card reveal" data-category="oriental">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M50 52 L110 52 L110 70 L122 86 L122 196 L38 196 L38 86 L50 70 Z" stroke="currentColor" stroke-width="1.2"/><path d="M62 30 L98 30 L98 52 L62 52 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Oriental</p>
+          <h3>Ámbar Nocturno</h3>
+          <p class="perfume-desc">Resinas cálidas, especias y una base de vainilla oscura. Denso, para las noches largas.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> canela, clavo de olor</span>
+            <span><b>Corazón</b> ámbar, incienso</span>
+            <span><b>Fondo</b> vainilla oscura, benjuí</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$72.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="oriental">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M56 48 L104 48 L104 66 L116 82 L116 194 L44 194 L44 82 L56 66 Z" stroke="currentColor" stroke-width="1.2"/><path d="M68 26 L92 26 L92 48 L68 48 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Oriental</p>
+          <h3>Especias de Ruta</h3>
+          <p class="perfume-desc">Un mercado de especias al atardecer: cardamomo, azafrán y una base de madera dulce.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> cardamomo, azafrán</span>
+            <span><b>Corazón</b> rosa turca, canela</span>
+            <span><b>Fondo</b> madera dulce, almizcle</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$69.000</span><span class="ml">50 ml EDP</span></div>
+        </div>
+      </article>
+
+      <!-- ACUÁTICO -->
+      <article class="perfume-card reveal" data-category="acuatico">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M54 50 L106 50 L106 68 L118 84 L118 197 L42 197 L42 84 L54 68 Z" stroke="currentColor" stroke-width="1.2"/><path d="M66 28 L94 28 L94 50 L66 50 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Acuático</p>
+          <h3>Marea Baja</h3>
+          <p class="perfume-desc">El aire justo antes de que llegue una tormenta de verano sobre el mar: ozónico y mineral.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> notas de ozono, sal marina</span>
+            <span><b>Corazón</b> pepino, flor de loto</span>
+            <span><b>Fondo</b> almizcle marino, ámbar gris</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$60.000</span><span class="ml">50 ml EDT</span></div>
+        </div>
+      </article>
+
+      <article class="perfume-card reveal" data-category="acuatico">
+        <div class="perfume-art">
+          <svg viewBox="0 0 160 220" fill="none"><path d="M52 46 L108 46 L108 64 L120 80 L120 195 L40 195 L40 80 L52 64 Z" stroke="currentColor" stroke-width="1.2"/><path d="M64 24 L96 24 L96 46 L64 46 Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div class="perfume-info">
+          <p class="perfume-tag">Acuático</p>
+          <h3>Río Interior</h3>
+          <p class="perfume-desc">Agua dulce sobre piedra caliente: liviano, casi transparente, ideal para el día a día.</p>
+          <div class="note-pyramid">
+            <span><b>Salida</b> pera, hoja de higuera</span>
+            <span><b>Corazón</b> jazmín de agua, sal</span>
+            <span><b>Fondo</b> almizcle blanco, cedro</span>
+          </div>
+          <div class="perfume-meta"><span class="price">$57.000</span><span class="ml">50 ml EDT</span></div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="grid-empty" id="gridEmpty" hidden>No hay perfumes en esta familia por ahora. Escribinos y te avisamos apenas ingrese una nueva composición.</p>
+  </section>
+
+  <!-- ============ PIRÁMIDE DE NOTAS ============ -->
+  <section class="notes" id="notas">
+    <div class="section-head reveal">
+      <p class="eyebrow">Cómo se lee un perfume</p>
+      <h2>Tres capas que se van revelando con el tiempo</h2>
+    </div>
+
+    <div class="pyramid reveal">
+      <div class="pyramid-row row-top">
+        <div class="pyramid-block">
+          <span class="pyramid-time">Primeros 15 min</span>
+          <h3>Salida</h3>
+          <p>Lo primero que se siente al aplicar: cítricos, especias frescas o notas verdes. Se evapora rápido, es la presentación.</p>
+        </div>
+      </div>
+      <div class="pyramid-row row-mid">
+        <div class="pyramid-block">
+          <span class="pyramid-time">De 15 min a 3 horas</span>
+          <h3>Corazón</h3>
+          <p>El cuerpo del perfume: flores, especias más densas. Define la personalidad real de la fragancia.</p>
+        </div>
+      </div>
+      <div class="pyramid-row row-base">
+        <div class="pyramid-block">
+          <span class="pyramid-time">De 3 a 8+ horas</span>
+          <h3>Fondo</h3>
+          <p>Lo que queda en la ropa al final del día: maderas, resinas, almizcles. Es la estela que se lleva quien te abraza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ATELIER ============ -->
+  <section class="atelier" id="atelier">
+    <div class="atelier-text reveal">
+      <p class="eyebrow">El perfumista</p>
+      <h2>Cada fórmula se prueba en piel real, no en papel.</h2>
+      <p>
+        Estela es el trabajo de una sola narices: Camila Ibarra, perfumista formada en
+        Grasse que volvió a Buenos Aires en 2017 a componer con un criterio simple —
+        si una fragancia no aguanta ocho horas sobre piel de verdad, no sale del taller.
+      </p>
+      <p>
+        Cada lanzamiento pasa por semanas de prueba con un grupo fijo de personas de
+        distinto tipo de piel, porque un mismo perfume no envejece igual en todos lados.
+        Lo que ves acá ya pasó esa prueba.
+      </p>
+      <div class="atelier-stats">
+        <div><span>34</span>fórmulas probadas por lanzamiento</div>
+        <div><span>8h+</span>de duración mínima exigida</div>
+        <div><span>2017</span>primer frasco de Estela</div>
+      </div>
+    </div>
+    <div class="atelier-art reveal" aria-hidden="true">
+      <svg viewBox="0 0 360 420" fill="none">
+        <circle cx="180" cy="150" r="90" stroke="currentColor" stroke-width="1"/>
+        <path d="M150 100 L210 100 L210 130 L225 148 L225 280 L135 280 L135 148 L150 130 Z" stroke="currentColor" stroke-width="1"/>
+        <path d="M162 70 L198 70 L198 100 L162 100 Z" stroke="currentColor" stroke-width="1"/>
+        <line x1="80" y1="360" x2="280" y2="360" stroke="currentColor" stroke-width=".6"/>
+        <line x1="100" y1="380" x2="260" y2="380" stroke="currentColor" stroke-width=".6"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIOS ============ -->
+  <section class="testimonials" id="testimonios">
+    <div class="section-head reveal">
+      <p class="eyebrow">Diario olfativo</p>
+      <h2>Lo que la gente anota después de usarlo</h2>
+    </div>
+
+    <div class="testimonial-carousel reveal">
+      <button class="t-arrow t-prev" id="tPrev" aria-label="Testimonio anterior">‹</button>
+      <div class="t-track" id="tTrack">
+        <blockquote class="t-slide is-active">
+          <p>"Uso Cedro de Monte hace dos años y todavía me paran a preguntar qué es. No se parece a nada que haya probado en un shopping."</p>
+          <cite>Nicolás F. — Cedro de Monte</cite>
+        </blockquote>
+        <blockquote class="t-slide">
+          <p>"Fui al perfilado sin saber qué buscaba. Me hicieron oler ocho materias primas antes de sugerirme nada. Terminé con Ámbar Nocturno y no me arrepiento."</p>
+          <cite>Delfina R. — Ámbar Nocturno</cite>
+        </blockquote>
+        <blockquote class="t-slide">
+          <p>"Jazmín Nocturno dura literalmente hasta el otro día en la bufanda. Es el primer perfume que compro que no desaparece a las tres horas."</p>
+          <cite>Tomás L. — Jazmín Nocturno</cite>
+        </blockquote>
+      </div>
+      <button class="t-arrow t-next" id="tNext" aria-label="Siguiente testimonio">›</button>
+    </div>
+    <div class="t-dots" id="tDots"></div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="contact" id="contacto">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contacto</p>
+      <h2>Pedí tu perfilado olfativo</h2>
+      <p class="contact-lead">
+        Es gratis y dura 40 minutos: probamos materias primas sueltas antes de las
+        fragancias armadas, para encontrar la familia que realmente te representa.
+      </p>
+      <ul class="contact-list">
+        <li><span class="contact-label">Boutique</span><span>Honduras 4890, Palermo, CABA</span></li>
+        <li><span class="contact-label">Horario</span><span>Martes a domingo, 12 a 20 h</span></li>
+        <li><span class="contact-label">Teléfono</span><span>+54 9 11 5555-0173</span></li>
+        <li><span class="contact-label">Email</span><span>hola@estela-perfumes.com.ar</span></li>
+      </ul>
+      <div class="contact-social">
+        <a href="#" aria-label="Instagram de Estela">Instagram</a>
+        <a href="#" aria-label="WhatsApp de Estela">WhatsApp</a>
+        <a href="#" aria-label="Spotify de Estela">Playlist Estela</a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <span class="field-error" data-error-for="name"></span>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="vos@email.com" required>
+        <span class="field-error" data-error-for="email"></span>
+      </div>
+      <div class="form-row">
+        <label for="interest">Familia que más te atrae</label>
+        <select id="interest" name="interest">
+          <option value="floral">Floral</option>
+          <option value="amaderado">Amaderado</option>
+          <option value="citrico">Cítrico</option>
+          <option value="oriental">Oriental</option>
+          <option value="acuatico">Acuático</option>
+          <option value="no-se">Todavía no sé</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4" placeholder="Contanos qué perfumes usaste antes y qué te gustaría probar" required></textarea>
+        <span class="field-error" data-error-for="message"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block"><span id="submitLabel">Pedir turno</span></button>
+      <p class="form-success" id="formSuccess" role="status" hidden>
+        Gracias — recibimos tu pedido y te confirmamos el turno dentro de las próximas 24 horas hábiles.
+      </p>
+    </form>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="#inicio" class="brand brand-footer">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M15 12 L25 12 L25 17 L28 20 L28 34 L12 34 L12 20 L15 17 Z" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M17 8 L23 8 L23 12 L17 12 Z" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </span>
+      <span class="brand-name">Estela</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="#coleccion">Colección</a>
+      <a href="#notas">Notas</a>
+      <a href="#atelier">El perfumista</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <p class="footer-note">Perfumería de autor, Buenos Aires · © <span id="year"></span> Estela</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

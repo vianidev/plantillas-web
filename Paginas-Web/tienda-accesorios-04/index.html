@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NÍTIDO — Productos de limpieza para el hogar</title>
+<meta name="description" content="Productos de limpieza para el hogar. Multiuso, lavandina, desengrasante y más. Envíos en Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">NÍTIDO<span class="logo-dot">.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#ubicacion">Dónde estamos</a>
+    </nav>
+
+    <a class="btn btn-whatsapp" href="https://wa.me/5491100000000?text=Hola%20NÍTIDO%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">
+      Pedir por WhatsApp
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Limpieza para el hogar · Buenos Aires</p>
+        <h1>Limpieza que<br>se nota<span class="citrus-dot">.</span></h1>
+        <p class="hero-text">
+          Fabricamos y vendimos productos de limpieza pensados para el uso diario:
+          rinden más, cuidan las superficies y dejan ese olor a "recién limpiado"
+          que se nota apenas entrás a casa.
+        </p>
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+          <a href="#contacto" class="btn btn-ghost">Hacer un pedido</a>
+        </div>
+        <ul class="hero-badges">
+          <li><strong>+8 años</strong> en el barrio</li>
+          <li><strong>Envíos</strong> en CABA y GBA</li>
+          <li><strong>Al por mayor</strong> y por menor</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" style="--delay:.15s">
+        <div class="wipe-frame">
+          <img src="https://picsum.photos/seed/nitido-hero/760/860" alt="Productos de limpieza NÍTIDO ordenados sobre una mesada" loading="eager">
+          <span class="wipe-shine" aria-hidden="true"></span>
+        </div>
+        <div class="tag-float">
+          <span class="tag-label">rinde</span>
+          <span class="tag-value">2x</span>
+          <span class="tag-sub">diluido en agua</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI VALUE PROPS -->
+  <section class="strip">
+    <div class="wrap strip-inner">
+      <div class="strip-item reveal">
+        <span class="strip-num">01</span>
+        <p>Fórmulas concentradas, rinden más que las tradicionales</p>
+      </div>
+      <div class="strip-item reveal" style="--delay:.08s">
+        <span class="strip-num">02</span>
+        <p>Envíos en el día dentro de CABA, a domicilio o al local</p>
+      </div>
+      <div class="strip-item reveal" style="--delay:.16s">
+        <span class="strip-num">03</span>
+        <p>Envases retornables: traé el tuyo y pagás menos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="section productos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Lo que tenemos<br>en stock</h2>
+        <p class="section-sub">Precios por unidad. Consultanos por bidones de mayor litraje o pedidos al por mayor.</p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- las tarjetas de producto se insertan en el HTML directamente -->
+
+        <article class="product-card reveal">
+          <div class="wipe-frame small">
+            <img src="https://picsum.photos/seed/nitido-multiuso/500/500" alt="Multiuso Cítrico 1L" loading="lazy">
+            <span class="wipe-shine" aria-hidden="true"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Multiuso Cítrico</h3>
+              <span class="price">$3.200</span>
+            </div>
+            <p class="product-vol">1 litro</p>
+            <p class="product-desc">Desengrasa y perfuma en un solo paso. Aroma a limón recién cortado.</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20pedir%20Multiuso%20C%C3%ADtrico%201L" target="_blank" rel="noopener">Pedir →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.06s">
+          <div class="wipe-frame small">
+            <img src="https://picsum.photos/seed/nitido-lavandina/500/500" alt="Lavandina Concentrada 1L" loading="lazy">
+            <span class="wipe-shine" aria-hidden="true"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Lavandina Concentrada</h3>
+              <span class="price">$2.100</span>
+            </div>
+            <p class="product-vol">1 litro</p>
+            <p class="product-desc">Blanquea y desinfecta sin manchar. Rinde el doble diluida en agua.</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20pedir%20Lavandina%20Concentrada%201L" target="_blank" rel="noopener">Pedir →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.12s">
+          <div class="wipe-frame small">
+            <img src="https://picsum.photos/seed/nitido-desengrasante/500/500" alt="Desengrasante de Cocina 500ml" loading="lazy">
+            <span class="wipe-shine" aria-hidden="true"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Desengrasante de Cocina</h3>
+              <span class="price">$2.800</span>
+            </div>
+            <p class="product-vol">500 ml</p>
+            <p class="product-desc">Ataca la grasa cocinada sin esfuerzo. Ideal para hornallas y campanas.</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20pedir%20Desengrasante%20de%20Cocina%20500ml" target="_blank" rel="noopener">Pedir →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.18s">
+          <div class="wipe-frame small">
+            <img src="https://picsum.photos/seed/nitido-pisos/500/500" alt="Limpiapisos Lavanda 900ml" loading="lazy">
+            <span class="wipe-shine" aria-hidden="true"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Limpiapisos Lavanda</h3>
+              <span class="price">$2.500</span>
+            </div>
+            <p class="product-vol">900 ml</p>
+            <p class="product-desc">Deja el piso brillante y un aroma que dura todo el día.</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20pedir%20Limpiapisos%20Lavanda%20900ml" target="_blank" rel="noopener">Pedir →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.24s">
+          <div class="wipe-frame small">
+            <img src="https://picsum.photos/seed/nitido-suavizante/500/500" alt="Suavizante Textil 1L" loading="lazy">
+            <span class="wipe-shine" aria-hidden="true"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Suavizante Textil</h3>
+              <span class="price">$2.900</span>
+            </div>
+            <p class="product-vol">1 litro</p>
+            <p class="product-desc">Suaviza la ropa y cuida las fibras. Fragancia suave y duradera.</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20pedir%20Suavizante%20Textil%201L" target="_blank" rel="noopener">Pedir →</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="--delay:.3s">
+          <div class="wipe-frame small">
+            <img src="https://picsum.photos/seed/nitido-manos/500/500" alt="Jabón Líquido para Manos 500ml" loading="lazy">
+            <span class="wipe-shine" aria-hidden="true"></span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Jabón Líquido de Manos</h3>
+              <span class="price">$2.000</span>
+            </div>
+            <p class="product-vol">500 ml</p>
+            <p class="product-desc">Limpieza suave para el uso diario. Con glicerina, no reseca la piel.</p>
+            <a class="product-buy" href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20pedir%20Jab%C3%B3n%20L%C3%ADquido%20de%20Manos%20500ml" target="_blank" rel="noopener">Pedir →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section nosotros">
+    <div class="wrap nosotros-inner">
+      <div class="nosotros-visual reveal">
+        <div class="wipe-frame">
+          <img src="https://picsum.photos/seed/nitido-taller/640/720" alt="Preparación de productos de limpieza" loading="lazy">
+          <span class="wipe-shine" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="nosotros-copy reveal" style="--delay:.1s">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2>Un negocio de barrio,<br>hecho a mano</h2>
+        <p>
+          Empezamos preparando productos de limpieza para vecinos y hoy
+          armamos pedidos para casas, consorcios y comercios de toda la zona.
+          Elegimos materias primas de calidad y probamos cada fórmula antes
+          de sacarla a la venta: si no nos convence a nosotros, no llega al frasco.
+        </p>
+        <div class="mini-stats">
+          <div>
+            <span class="mini-num">+1.200</span>
+            <span class="mini-label">pedidos entregados</span>
+          </div>
+          <div>
+            <span class="mini-num">6</span>
+            <span class="mini-label">productos en catálogo</span>
+          </div>
+          <div>
+            <span class="mini-num">48hs</span>
+            <span class="mini-label">tiempo de entrega</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="wrap contacto-inner">
+      <div class="reveal">
+        <p class="eyebrow">Hacé tu pedido</p>
+        <h2>Contanos qué<br>necesitás</h2>
+        <p class="section-sub">Completá el formulario y te escribimos por WhatsApp para coordinar el pedido y el envío.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">WhatsApp</span>
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+          </li>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:hola@nitido.com.ar">hola@nitido.com.ar</a>
+          </li>
+          <li>
+            <span class="contact-label">Horario</span>
+            <span>Lunes a sábados, 9 a 18 h</span>
+          </li>
+        </ul>
+
+        <div class="social-row">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="order-form reveal" id="orderForm" style="--delay:.1s" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="11 0000 0000" required>
+        </div>
+        <div class="field">
+          <label for="producto">¿Qué querés pedir?</label>
+          <select id="producto" name="producto" required>
+            <option value="" disabled selected>Elegí un producto</option>
+            <option>Multiuso Cítrico 1L</option>
+            <option>Lavandina Concentrada 1L</option>
+            <option>Desengrasante de Cocina 500ml</option>
+            <option>Limpiapisos Lavanda 900ml</option>
+            <option>Suavizante Textil 1L</option>
+            <option>Jabón Líquido de Manos 500ml</option>
+            <option>Otro / varios productos</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cantidad, dirección de entrega, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar pedido por WhatsApp</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="section ubicacion">
+    <div class="wrap ubicacion-inner">
+      <div class="reveal">
+        <p class="eyebrow">Dónde estamos</p>
+        <h2>Local y retiro<br>en el barrio</h2>
+        <p class="section-sub">
+          Av. Rivadavia 1234, Caballito, CABA. Retirá tu pedido en el local
+          o coordiná el envío a domicilio dentro de CABA y GBA.
+        </p>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=Av.+Rivadavia+1234,+CABA" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+      </div>
+      <div class="map-frame reveal" style="--delay:.1s">
+        <iframe
+          title="Ubicación NÍTIDO"
+          src="https://maps.google.com/maps?q=Av.%20Rivadavia%201234%2C%20CABA&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="logo">NÍTIDO<span class="logo-dot">.</span></a>
+    <p>© <span id="year"></span> NÍTIDO — Productos de limpieza. Hecho con cuidado en Buenos Aires.</p>
+    <div class="social-row">
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
