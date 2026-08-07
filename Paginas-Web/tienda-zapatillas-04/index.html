@@ -1,506 +1,362 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CANCHA DROPS — Zapatillas en lanzamiento</title>
-<meta name="description" content="CANCHA DROPS, tienda de zapatillas con lanzamientos, carrito, buscador y más.">
+<title>CAJA — Zapatillas</title>
+<meta name="description" content="CAJA. Zapatillas urbanas, running, basketball y skate. Encontrá tu talle exacto.">
+
+<!--
+  ============================================================
+  GUÍA RÁPIDA PARA VOS (quien va a completar la plantilla):
+  ============================================================
+  1) Las imágenes son cajas con borde punteado y clase
+     "img-placeholder". Cada una dice QUÉ foto va ahí.
+     Para poner la imagen real, reemplazá el <div class="img-placeholder">
+     por <img src="images/tu-foto.jpg" alt="descripción">.
+  2) El catálogo se carga desde script.js, array PRODUCTOS.
+     Ahí editás nombre, categoría, precio, descripción y el
+     rango de talles disponibles de cada zapatilla.
+  3) El "Buscador de talle" es funcional: el visitante elige
+     Hombre / Mujer / Niños, mueve el control y ve el talle
+     equivalente en CM, US, UK y EU. Las tablas de conversión
+     están en script.js (TALLES) y son aproximadas — se pueden
+     ajustar si tenés tu propia tabla de talles.
+  4) Datos de contacto, dirección y redes están marcados con
+     "EDITAR AQUÍ".
+  ============================================================
+-->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===================== BARRA SUPERIOR ===================== -->
-<div class="marquee-bar" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Envío gratis desde $70.000</span><span>·</span>
-    <span>3 cuotas sin interés</span><span>·</span>
-    <span>Cambios sin cargo en 15 días</span><span>·</span>
-    <span>Retiro en el local sin costo</span><span>·</span>
-    <span>Envío gratis desde $70.000</span><span>·</span>
-    <span>3 cuotas sin interés</span><span>·</span>
-    <span>Cambios sin cargo en 15 días</span><span>·</span>
-    <span>Retiro en el local sin costo</span><span>·</span>
-  </div>
-</div>
-
-<!-- ===================== HEADER ===================== -->
-<header class="site-header" id="top">
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-mark">C</span>
-      <span class="logo-text">CANCHA<em>DROPS</em></span>
-    </a>
+    <a href="#inicio" class="logo">CAJA<span class="logo-dot">.</span></a>
 
     <nav class="nav" id="nav">
-      <a href="#catalogo">Catálogo</a>
-      <a href="#drop">Próximo drop</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#faq">Preguntas</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#talles" class="nav-link">Buscar talle</a>
+      <a href="#catalogo" class="nav-link">Catálogo</a>
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#ubicacion" class="nav-link">Ubicación</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
     </nav>
 
-    <div class="header-actions">
-      <button class="icon-btn" id="searchToggle" aria-label="Buscar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      </button>
-      <button class="icon-btn" id="themeToggle" aria-label="Cambiar a modo claro">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
-      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Abrir carrito">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9.5" cy="20.5" r="1.4"/><circle cx="17" cy="20.5" r="1.4"/></svg>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-
-  <div class="search-panel" id="searchPanel">
-    <div class="wrap search-panel-inner">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      <input type="text" id="searchInput" placeholder="Buscar por modelo o marca...">
-      <button id="searchClose" aria-label="Cerrar buscador">✕</button>
-    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="hero-glow" aria-hidden="true"></div>
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="stamp-badge" aria-hidden="true">
+    <span>Talle exacto<br>garantizado</span>
+  </div>
+
   <div class="wrap hero-inner">
-    <div class="hero-copy" data-reveal>
-      <span class="stamp">Drop en curso · stock limitado</span>
-      <h1>Cada par<br>tiene su <span class="hl">momento.</span></h1>
-      <p class="hero-sub">Lanzamientos, ediciones limitadas y básicos que nunca faltan. Elegí, sumá al carrito y listo.</p>
-      <div class="hero-cta">
-        <a href="#catalogo" class="btn btn-primary">Explorar catálogo</a>
-        <a href="#drop" class="btn btn-ghost">Ver próximo drop</a>
+    <div class="hero-text">
+      <p class="eyebrow">Zapatillas &mdash; sin vueltas</p>
+      <h1 class="hero-title">ABRÍ<br>LA CAJA</h1>
+      <p class="hero-copy">
+        Urbanas, running, basketball y skate. Buscá tu talle exacto
+        antes de comprar y elegí sin adivinar.
+      </p>
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+        <a href="#talles" class="btn btn-ghost">Buscar mi talle</a>
       </div>
     </div>
 
-    <div class="hero-ticket" data-reveal>
-      <div class="ticket-card">
-        <div class="ticket-media">
-          <svg viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M18 96c0-5 4-8 10-10l28-10c5-2 7-5 9-11 3-9 10-15 21-16 15-2 28 3 39 11l30 21c7 5 11 11 11 19v9c0 4-3 7-7 7H26c-5 0-8-3-8-8v-12z" fill="var(--accent)" opacity="0.95"/>
-            <path d="M18 96c0-5 4-8 10-10l28-10c5-2 7-5 9-11 3-9 10-15 21-16 15-2 28 3 39 11l30 21" stroke="var(--ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-            <path d="M28 107h134" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="ticket-perf" aria-hidden="true"></div>
-        <div class="ticket-info">
-          <span class="ticket-label">Entrada · General</span>
-          <strong>Aro Alto — Salto</strong>
-          <span class="ticket-price">$ 94.999</span>
-        </div>
+    <div class="hero-media">
+      <!-- EDITAR: foto principal, zapatilla saliendo de la caja -->
+      <div class="img-placeholder box-shape">
+        <span>Foto principal<br>(zapatilla + caja abierta)</span>
       </div>
-      <div class="hero-badge">
-        <span>-15%</span>
-        <small>en tu 1ra compra</small>
-      </div>
+      <div class="hero-lid" aria-hidden="true"></div>
     </div>
   </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
 </section>
 
-<!-- ===================== MARCAS ===================== -->
-<section class="brands" aria-label="Marcas disponibles">
-  <div class="brands-track">
-    <span>PULSO</span><span>URBANIX</span><span>SALTO</span><span>DECKSIDE</span><span>NORTE°</span>
-    <span>PULSO</span><span>URBANIX</span><span>SALTO</span><span>DECKSIDE</span><span>NORTE°</span>
-  </div>
-</section>
-
-<!-- ===================== CATEGORIAS ===================== -->
-<section class="categories">
+<!-- ============ BUSCADOR DE TALLE ============ -->
+<section class="talles-section" id="talles">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Categorías</span>
-      <h2>Andá directo a lo tuyo</h2>
-    </div>
-    <div class="cat-grid" data-reveal>
-      <button class="cat-card" data-jump="running">
-        <span class="cat-tag">01</span>
-        <h3>Running</h3>
-        <p>Livianas, para sumar kilómetros.</p>
-      </button>
-      <button class="cat-card" data-jump="urbano">
-        <span class="cat-tag">02</span>
-        <h3>Urbano</h3>
-        <p>Para el día a día, cómodas y prolijas.</p>
-      </button>
-      <button class="cat-card" data-jump="basquet">
-        <span class="cat-tag">03</span>
-        <h3>Básquet</h3>
-        <p>Agarre y respuesta para la cancha.</p>
-      </button>
-      <button class="cat-card" data-jump="skate">
-        <span class="cat-tag">04</span>
-        <h3>Skate</h3>
-        <p>Base plana, resistentes al uso diario.</p>
-      </button>
-    </div>
-  </div>
-</section>
+    <p class="eyebrow">Antes de comprar</p>
+    <h2 class="section-title">Buscá tu talle</h2>
+    <p class="body-md talles-copy">
+      Medí tu pie desde el talón hasta la punta del dedo más largo, en
+      centímetros, parado y con el peso apoyado. Después buscá esa
+      medida acá abajo.
+    </p>
 
-<!-- ===================== CATALOGO ===================== -->
-<section class="catalog" id="catalogo">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Catálogo</span>
-      <h2>Lo que tenemos en caja hoy</h2>
-      <p>Buscá, filtrá y ordená. Cada modelo trae talles y colores disponibles.</p>
-    </div>
+    <div class="talles-card">
+      <div class="talles-tabs" id="tallesTabs">
+        <button class="talles-tab is-active" data-grupo="hombre">Hombre</button>
+        <button class="talles-tab" data-grupo="mujer">Mujer</button>
+        <button class="talles-tab" data-grupo="ninos">Niños</button>
+      </div>
 
-    <div class="toolbar" data-reveal>
-      <div class="filters" id="filters">
-        <button class="filter-pill is-active" data-filter="todos">Todos</button>
-        <button class="filter-pill" data-filter="running">Running</button>
-        <button class="filter-pill" data-filter="urbano">Urbano</button>
-        <button class="filter-pill" data-filter="basquet">Básquet</button>
-        <button class="filter-pill" data-filter="skate">Skate</button>
-      </div>
-      <label class="sort-select">
-        <span>Ordenar</span>
-        <select id="sortSelect">
-          <option value="relevancia">Relevancia</option>
-          <option value="menor">Precio: menor a mayor</option>
-          <option value="mayor">Precio: mayor a menor</option>
-          <option value="nuevo">Novedades primero</option>
-        </select>
-      </label>
-    </div>
+      <input
+        type="range"
+        id="tallesSlider"
+        class="talles-slider"
+        min="0" max="14" value="7" step="1"
+        aria-label="Elegí tu medida de pie en centímetros">
 
-    <div class="product-grid" id="productGrid"><!-- generado por script.js --></div>
-  </div>
-</section>
-
-<!-- ===================== DROP DESTACADO ===================== -->
-<section class="drop" id="drop">
-  <div class="wrap drop-inner">
-    <div class="drop-copy" data-reveal>
-      <span class="eyebrow eyebrow-light">Próximo drop</span>
-      <h2>Triple Doble, edición Cancha.</h2>
-      <p>Serie limitada de 200 pares, numerados. Se abre la venta al llegar el conteo a cero — dejá tu mail en el newsletter para tener acceso 1 hora antes.</p>
-      <div class="countdown" id="countdown">
-        <div><span id="cd-d">00</span><small>días</small></div>
-        <div><span id="cd-h">00</span><small>hs</small></div>
-        <div><span id="cd-m">00</span><small>min</small></div>
-        <div><span id="cd-s">00</span><small>seg</small></div>
-      </div>
-      <a href="#newsletter" class="btn btn-primary">Quiero acceso anticipado</a>
-    </div>
-    <div class="drop-art" data-reveal>
-      <svg viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M25 130c0-6 5-10 13-13l36-13c6-3 9-6 12-14 4-12 13-20 27-21 19-2 36 4 51 14l39 27c9 6 14 14 14 24v12c0 5-4 9-9 9H36c-6 0-11-4-11-10v-15z" fill="var(--accent-2)"/>
-        <path d="M25 130c0-6 5-10 13-13l36-13c6-3 9-6 12-14 4-12 13-20 27-21 19-2 36 4 51 14l39 27" stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M40 148h176" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FEATURES ===================== -->
-<section class="features" id="nosotros">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Por qué CANCHA</span>
-      <h2>Comprar zapatillas sin dolores de cabeza</h2>
-    </div>
-    <div class="feature-grid">
-      <div class="feature-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
-        <h3>Envío a todo el país</h3>
-        <p>Despachamos en 24/48hs con seguimiento en vivo.</p>
-      </div>
-      <div class="feature-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M4.5 15a8 8 0 0 0 14.5 3.5M19.5 9A8 8 0 0 0 5 5.5"/></svg>
-        <h3>Cambios sin cargo</h3>
-        <p>15 días para cambiar talle o modelo.</p>
-      </div>
-      <div class="feature-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg>
-        <h3>Talles originales</h3>
-        <p>Directo de distribuidores. Cero réplicas.</p>
-      </div>
-      <div class="feature-card" data-reveal>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
-        <h3>Hasta 3 cuotas</h3>
-        <p>Sin interés con las principales tarjetas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== RESEÑAS (carrusel) ===================== -->
-<section class="reviews">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Reseñas</span>
-      <h2>Lo que dicen los que ya compraron</h2>
-    </div>
-    <div class="review-carousel" data-reveal>
-      <button class="carousel-arrow" id="revPrev" aria-label="Reseña anterior">‹</button>
-      <div class="review-viewport">
-        <div class="review-slides" id="reviewSlides">
-          <blockquote class="review-slide">
-            <p>“Pedí un 42 y llegó perfecto, con la caja intacta. Volví a comprar dos veces más.”</p>
-            <cite>Julián R. — Buenos Aires</cite>
-          </blockquote>
-          <blockquote class="review-slide">
-            <p>“Cambié el talle sin drama y me respondieron por WhatsApp en el momento.”</p>
-            <cite>Mica G. — Rosario</cite>
-          </blockquote>
-          <blockquote class="review-slide">
-            <p>“Buenos precios y variedad real, no las mismas cuatro zapatillas de siempre.”</p>
-            <cite>Fede A. — Córdoba</cite>
-          </blockquote>
-          <blockquote class="review-slide">
-            <p>“Compré para el drop limitado y llegó numerado, como decía la web. Una genialidad.”</p>
-            <cite>Sol M. — Mendoza</cite>
-          </blockquote>
+      <div class="talles-resultado" id="tallesResultado">
+        <div class="talle-dato">
+          <span class="talle-label">CM</span>
+          <span class="talle-valor" id="tallesCm">—</span>
+        </div>
+        <div class="talle-dato">
+          <span class="talle-label">US</span>
+          <span class="talle-valor" id="tallesUs">—</span>
+        </div>
+        <div class="talle-dato">
+          <span class="talle-label">UK</span>
+          <span class="talle-valor" id="tallesUk">—</span>
+        </div>
+        <div class="talle-dato">
+          <span class="talle-label">EU</span>
+          <span class="talle-valor" id="tallesEu">—</span>
         </div>
       </div>
-      <button class="carousel-arrow" id="revNext" aria-label="Reseña siguiente">›</button>
+
+      <p class="talles-nota">Guía de referencia aproximada. Puede variar según el modelo.</p>
     </div>
-    <div class="carousel-dots" id="reviewDots"></div>
   </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
 </section>
 
-<!-- ===================== GALERIA ===================== -->
-<section class="gallery">
+<!-- ============ PRESENTACIÓN / NOSOTROS ============ -->
+<section class="presentacion" id="nosotros">
+  <div class="wrap presentacion-inner">
+    <div class="presentacion-media">
+      <!-- EDITAR: foto del local, taller o del equipo -->
+      <div class="img-placeholder">
+        <span>Foto del local / pared de cajas / equipo</span>
+      </div>
+    </div>
+
+    <div class="presentacion-text">
+      <p class="eyebrow">Carta de presentación</p>
+      <h2 class="section-title">Quiénes somos</h2>
+      <p class="body-lg">
+        <!-- EDITAR: texto de presentación de tu marca -->
+        CAJA es una zapatillería de barrio. Elegimos cada modelo
+        probándolo nosotros mismos: cómo pisa, cómo respira, cuánto
+        dura. Nada de vender por vender: si un modelo no nos convence,
+        no entra al local.
+      </p>
+      <p class="body-md">
+        Trabajamos con talles reales, no aproximados, y si tenés dudas
+        de qué talle pedir, te ayudamos antes de que compres, no después.
+      </p>
+
+      <ul class="valores-list">
+        <li><span class="valores-num">01</span> Probadas antes de vender</li>
+        <li><span class="valores-num">02</span> Talles verificados en el local</li>
+        <li><span class="valores-num">03</span> Cambio de talle sin vueltas</li>
+      </ul>
+    </div>
+  </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
+</section>
+
+<!-- ============ CATÁLOGO ============ -->
+<section class="catalogo" id="catalogo">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Comunidad</span>
-      <h2>Etiquetanos @cancha.sneakers</h2>
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Catálogo</p>
+        <h2 class="section-title">Zapatillas</h2>
+      </div>
+      <p class="body-md catalogo-copy">
+        Precios, descripciones y talles a modo de referencia &mdash;
+        editalos en <code>script.js</code>.
+      </p>
     </div>
-    <div class="gallery-grid" data-reveal>
-      <div class="gallery-tile t1"></div>
-      <div class="gallery-tile t2"></div>
-      <div class="gallery-tile t3"></div>
-      <div class="gallery-tile t4"></div>
-      <div class="gallery-tile t5"></div>
-      <div class="gallery-tile t6"></div>
+
+    <div class="filtros" id="filtros">
+      <button class="filtro-btn is-active" data-filtro="todo">Todas</button>
+      <button class="filtro-btn" data-filtro="urbanas">Urbanas</button>
+      <button class="filtro-btn" data-filtro="running">Running</button>
+      <button class="filtro-btn" data-filtro="basketball">Basketball</button>
+      <button class="filtro-btn" data-filtro="skate">Skate</button>
+    </div>
+
+    <div class="productos-grid" id="productosGrid">
+      <!-- Las tarjetas de producto se generan desde script.js -->
     </div>
   </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
 </section>
 
-<!-- ===================== FAQ ===================== -->
-<section class="faq" id="faq">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Preguntas frecuentes</span>
-      <h2>Antes de comprar</h2>
+<!-- ============ UBICACIÓN ============ -->
+<section class="ubicacion" id="ubicacion">
+  <div class="wrap ubicacion-inner">
+    <div class="ubicacion-text">
+      <p class="eyebrow">Visitanos</p>
+      <h2 class="section-title">Dónde estamos</h2>
+
+      <!-- EDITAR: dirección, horarios y ciudad reales -->
+      <div class="dato-bloque">
+        <h3>Dirección</h3>
+        <p>Calle Falsa 123, Local 7<br>Buenos Aires, Argentina</p>
+      </div>
+      <div class="dato-bloque">
+        <h3>Horarios</h3>
+        <p>Lunes a viernes: 10 a 19 h<br>Sábados: 10 a 14 h</p>
+      </div>
+      <div class="dato-bloque">
+        <h3>Envíos</h3>
+        <p>Envíos a todo el país. Confirmá el talle antes de despachar.</p>
+      </div>
     </div>
-    <div class="accordion" id="accordion" data-reveal>
-      <div class="accordion-item is-open">
-        <button class="accordion-trigger">
-          <span>¿Cuánto tarda el envío?</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <p>Entre 24 y 48hs hábiles a todo el país. Te llega el número de seguimiento por email apenas despacha.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span>¿Puedo cambiar el talle si no me queda?</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <p>Sí, tenés 15 días desde que lo recibís. El cambio no tiene cargo si el par no fue usado en la calle.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span>¿Los pares son originales?</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <p>Sí. Trabajamos directo con distribuidores oficiales, sin intermediarios de dudosa procedencia.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-trigger">
-          <span>¿Cómo funcionan los drops?</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <p>Son ediciones limitadas y numeradas. Se anuncian con anticipación y quienes están suscriptos al newsletter entran una hora antes.</p>
-        </div>
+
+    <div class="ubicacion-mapa">
+      <!--
+        EDITAR: reemplazá este placeholder por un iframe de Google Maps.
+        Ejemplo:
+        <iframe src="https://www.google.com/maps/embed?..." width="100%"
+        height="100%" style="border:0;" loading="lazy"></iframe>
+      -->
+      <div class="img-placeholder mapa-placeholder">
+        <span>Mapa (Google Maps embed)</span>
       </div>
     </div>
   </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
 </section>
 
-<!-- ===================== NEWSLETTER ===================== -->
-<section class="newsletter" id="newsletter">
-  <div class="wrap newsletter-inner" data-reveal>
-    <div>
-      <span class="eyebrow eyebrow-light">Newsletter</span>
-      <h2>Enterate primero de cada drop</h2>
-      <p>Un mail cada tanto, nada de spam. Podés darte de baja cuando quieras.</p>
-    </div>
-    <form id="newsletterForm" class="newsletter-form">
-      <input type="email" id="newsletterEmail" placeholder="tu@email.com" required>
-      <button type="submit" class="btn btn-primary">Sumarme</button>
-    </form>
-  </div>
-</section>
+<!-- ============ CONTACTO ============ -->
+<section class="contacto" id="contacto">
+  <div class="wrap contacto-inner">
+    <div class="contacto-form-col">
+      <p class="eyebrow">Escribinos</p>
+      <h2 class="section-title">Contacto</h2>
+      <p class="body-md">¿Dudas de talle, stock o cambios? Escribinos y te respondemos.</p>
 
-<!-- ===================== CONTACTO + UBICACION ===================== -->
-<section class="contact" id="contacto">
-  <div class="wrap contact-inner">
-    <div class="contact-form-wrap" data-reveal>
-      <span class="eyebrow">Contacto</span>
-      <h2>Escribinos</h2>
-      <p class="muted">Consultas por talles, stock o mayoristas. Te respondemos a la brevedad.</p>
-      <form id="contactForm" novalidate>
-        <div class="field">
+      <form id="contactForm" class="form" novalidate>
+        <div class="form-row">
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-          <span class="field-error">Contanos tu nombre.</span>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          <span class="form-error" data-error-for="nombre"></span>
         </div>
-        <div class="field">
+
+        <div class="form-row">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com">
-          <span class="field-error">Necesitamos un email válido.</span>
+          <input type="email" id="email" name="email" placeholder="tuemail@correo.com" required>
+          <span class="form-error" data-error-for="email"></span>
         </div>
-        <div class="field">
+
+        <div class="form-row">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="Consulta general">Consulta general</option>
+            <option value="Ayuda con el talle">Ayuda con el talle</option>
+            <option value="Stock de un modelo">Stock de un modelo</option>
+            <option value="Envíos">Envíos</option>
+            <option value="Cambios y devoluciones">Cambios y devoluciones</option>
+          </select>
+        </div>
+
+        <div class="form-row">
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué te ayudamos?"></textarea>
-          <span class="field-error">Escribí tu consulta.</span>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué necesitás" required></textarea>
+          <span class="form-error" data-error-for="mensaje"></span>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          <span class="btn-label">Enviar mensaje</span>
-        </button>
-        <p class="form-success" id="formSuccess" role="status">¡Listo! Recibimos tu mensaje, te contestamos pronto.</p>
+
+        <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
 
-    <aside class="contact-info" data-reveal>
-      <h3>Otras formas de encontrarnos</h3>
-      <ul class="info-list">
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15.5c0 .5-.4 1-1 1-4.8 0-9-4.2-9-9 0-.6.5-1 1-1l2.5-.5 1.5 4-1.5 1.5c.7 1.4 1.9 2.6 3.3 3.3l1.5-1.5 4 1.5z"/></svg>
-          <div><span>WhatsApp</span><a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
-          <div><span>Email</span><a href="mailto:hola@cancha.com.ar">hola@cancha.com.ar</a></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-          <div><span>Instagram</span><a href="https://instagram.com" target="_blank" rel="noopener">@cancha.sneakers</a></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><span>Horario</span><a href="#">Lun a sáb, 10 a 20hs</a></div>
-        </li>
-      </ul>
-    </aside>
-  </div>
-
-  <div class="wrap" id="ubicacion">
-    <div class="location-block" data-reveal>
-      <div class="location-copy">
-        <span class="eyebrow eyebrow-light">Ubicación</span>
-        <h2>Visitá el local</h2>
-        <p class="muted">Av. Corrientes 1234, Buenos Aires, Argentina.</p>
-        <a class="btn btn-ghost" href="https://www.openstreetmap.org/?mlat=-34.6037&mlon=-58.3816#map=15/-34.6037/-58.3816" target="_blank" rel="noopener">Abrir en el mapa</a>
+    <div class="contacto-info-col">
+      <div class="contacto-card">
+        <h3>Escribinos directo</h3>
+        <ul class="contacto-lista">
+          <!-- EDITAR: datos de contacto reales -->
+          <li>
+            <span class="ic" aria-hidden="true">&#9993;</span>
+            <a href="mailto:hola@caja-zapatillas.com">hola@caja-zapatillas.com</a>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true">&#9742;</span>
+            <a href="tel:+541100000000">+54 11 0000-0000</a>
+          </li>
+        </ul>
       </div>
-      <div class="map-frame">
-        <iframe
-          title="Ubicación de CANCHA"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-58.3986%2C-34.6137%2C-58.3646%2C-34.5937&layer=mapnik&marker=-34.6037%2C-58.3816"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+
+      <div class="contacto-card">
+        <h3>Seguinos</h3>
+        <ul class="social-lista">
+          <!-- EDITAR: links reales de redes sociales -->
+          <li>
+            <a href="https://instagram.com/caja.zapatillas" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.5.45.6.24 1 .53 1.5 1s.76.9 1 1.5c.2.5.4 1.3.45 2.5.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.45 2.5-.24.6-.53 1-1 1.5s-.9.76-1.5 1c-.5.2-1.3.4-2.5.45-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.5-.45-.6-.24-1-.53-1.5-1s-.76-.9-1-1.5c-.2-.5-.4-1.3-.45-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-2 .45-2.5.24-.6.53-1 1-1.5s.9-.76 1.5-1c.5-.2 1.3-.4 2.5-.45C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52 0-4.76.07-1 .05-1.55.21-1.91.35-.48.19-.82.41-1.18.77-.36.36-.58.7-.77 1.18-.14.36-.3.9-.35 1.9C3 9.48 3 9.85 3 12s0 3.52.07 4.76c.05 1 .21 1.55.35 1.91.19.48.41.82.77 1.18.36.36.7.58 1.18.77.36.14.9.3 1.9.35 1.25.06 1.62.07 4.77.07s3.52 0 4.76-.07c1-.05 1.55-.21 1.91-.35.48-.19.82-.41 1.18-.77.36-.36.58-.7.77-1.18.14-.36.3-.9.35-1.9.06-1.25.07-1.62.07-4.77s0-3.52-.07-4.76c-.05-1-.21-1.55-.35-1.91a3.2 3.2 0 0 0-.77-1.18 3.2 3.2 0 0 0-1.18-.77c-.36-.14-.9-.3-1.9-.35C15.52 4 15.15 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.85-1.99a1.08 1.08 0 1 1-2.15 0 1.08 1.08 0 0 1 2.15 0z"/></svg>
+              </span>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/caja.zapatillas" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46h1.6V4.35C16.3 4.24 15.4 4.15 14.4 4.15c-2.4 0-4 1.46-4 4.15V10.5H8v3h2.4V21h3.1z"/></svg>
+              </span>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/541100000000" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.15-1.35A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 0 1 6.9 12.6l-.24.38.62 2.27-2.32-.61-.37.22A8.2 8.2 0 1 1 12 3.8zm-3.1 4.2c-.2 0-.5.06-.77.35-.26.3-1 1-1 2.4s1.03 2.8 1.18 3c.15.2 2 3.15 4.98 4.3 2.47.94 2.98.75 3.5.7.53-.05 1.7-.7 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.13-.26-.2-.55-.35-.29-.15-1.7-.84-1.96-.94-.26-.1-.46-.15-.65.15-.2.3-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.3-.02-.46.13-.6.13-.14.29-.35.44-.53.15-.17.2-.3.29-.5.1-.2.05-.37-.02-.52-.07-.15-.65-1.62-.9-2.22-.23-.57-.47-.5-.65-.5z"/></svg>
+              </span>
+              WhatsApp
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
-  <div class="wrap footer-grid">
+  <div class="wrap footer-inner">
     <div class="footer-brand">
-      <a href="#top" class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">CANCHA<em>DROPS</em></span>
-      </a>
-      <p>Sneakers con juego. Desde Buenos Aires para todo el país.</p>
+      <a href="#inicio" class="logo footer-logo">CAJA<span class="logo-dot">.</span></a>
+      <!-- EDITAR: dirección corta para el pie -->
+      <p>Calle Falsa 123, Buenos Aires</p>
     </div>
-    <div class="footer-col">
-      <h4>Tienda</h4>
+
+    <nav class="footer-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#talles">Buscar talle</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#drop">Próximo drop</a>
-      <a href="#nosotros">Nosotros</a>
-    </div>
-    <div class="footer-col">
-      <h4>Ayuda</h4>
-      <a href="#faq">Preguntas frecuentes</a>
-      <a href="#contacto">Contacto</a>
       <a href="#ubicacion">Ubicación</a>
-    </div>
-    <div class="footer-col">
-      <h4>Seguinos</h4>
-      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="mailto:hola@cancha.com.ar">Email</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://instagram.com/caja.zapatillas" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://facebook.com/caja.zapatillas" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/541100000000" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© <span id="year"></span> CANCHA DROPS. Todos los derechos reservados.</p>
-    <div class="payment-icons" aria-label="Medios de pago aceptados">
-      <span>VISA</span><span>MASTER</span><span>MP</span><span>AMEX</span>
-    </div>
+    <p>&copy; <span id="footerYear"></span> CAJA. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-<!-- ===================== CARRITO (panel lateral) ===================== -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
-  <div class="cart-drawer-head">
-    <h3>Tu carrito</h3>
-    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
-  </div>
-  <div class="cart-items" id="cartItems"><!-- generado por JS --></div>
-  <div class="cart-footer">
-    <div class="cart-subtotal">
-      <span>Subtotal</span>
-      <strong id="cartSubtotal">$ 0</strong>
-    </div>
-    <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar compra</button>
-    <p class="cart-note">El pago se coordina por WhatsApp una vez confirmado el pedido.</p>
-  </div>
-</aside>
-
-<!-- ===================== VISTA RÁPIDA (modal) ===================== -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="quick-modal" role="dialog" aria-modal="true" id="quickModal">
-    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
-    <div class="quick-media" id="quickMedia"></div>
-    <div class="quick-body">
-      <span class="card-brand" id="quickBrand"></span>
-      <h3 id="quickName"></h3>
-      <span class="price-now" id="quickPrice"></span>
-      <div class="quick-sizes">
-        <span class="quick-label">Talle</span>
-        <div class="size-options" id="quickSizes"></div>
-      </div>
-      <button class="btn btn-primary btn-block" id="quickAdd">Agregar al carrito</button>
-    </div>
-  </div>
-</div>
-
-<!-- ===================== TOAST + BACK TO TOP ===================== -->
-<div class="toast" id="toast"></div>
-<button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
 
 <script src="script.js"></script>
 </body>

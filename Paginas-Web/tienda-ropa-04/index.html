@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAMA — Indumentaria</title>
+<meta name="description" content="TRAMA. Ropa hecha con oficio. Remeras, pantalones, suéteres y más.">
+
+<!--
+  ============================================================
+  GUÍA RÁPIDA PARA VOS (quien va a completar la plantilla):
+  ============================================================
+  1) Las imágenes están marcadas como cajas con borde punteado
+     y la clase "img-placeholder". Cada una tiene un texto que
+     indica QUÉ imagen va ahí (ej: "Foto de fachada del local").
+  2) Para poner una imagen real, reemplazá el <div class="img-placeholder">
+     completo por: <img src="images/tu-foto.jpg" alt="descripción">
+     dentro del mismo contenedor (mismas clases del contenedor).
+  3) Los productos (remeras, pantalones, suéteres...) se cargan
+     desde script.js, en el array PRODUCTOS. Ahí editás nombre,
+     categoría, precio, descripción y la ruta de la imagen —
+     no hace falta tocar el HTML para cargar productos nuevos.
+  4) Los datos de contacto (dirección, teléfono, redes, mail)
+     están marcados con comentarios "EDITAR AQUÍ" en este archivo
+     y en el footer.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;700;800;900&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="#inicio" class="logo">TRAMA<span class="logo-dot">.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#coleccion" class="nav-link">Colección</a>
+      <a href="#ubicacion" class="nav-link">Ubicación</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Indumentaria &mdash; hecha con oficio</p>
+      <h1 class="hero-title">VESTÍ<br>LA TRAMA<br>DE TU DÍA</h1>
+      <p class="hero-copy">
+        Remeras, pantalones y suéteres pensados para durar. Piezas simples,
+        bien cortadas, con materiales nobles. Sin vueltas.
+      </p>
+      <div class="hero-actions">
+        <a href="#coleccion" class="btn btn-primary">Ver colección</a>
+        <a href="#contacto" class="btn btn-ghost">Contactar</a>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <!-- EDITAR: foto principal de producto o de la marca, formato vertical -->
+      <div class="img-placeholder tag-shape">
+        <span>Foto principal<br>(vertical, producto destacado)</span>
+      </div>
+      <div class="hero-tag" aria-hidden="true">
+        <span class="hero-tag-string"></span>
+        <span class="hero-tag-body">NUEVA<br>TEMPORADA</span>
+      </div>
+    </div>
+  </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
+</section>
+
+<!-- ============ PRESENTACIÓN / NOSOTROS ============ -->
+<section class="presentacion" id="nosotros">
+  <div class="wrap presentacion-inner">
+    <div class="presentacion-media">
+      <!-- EDITAR: foto del taller, local o del equipo -->
+      <div class="img-placeholder">
+        <span>Foto del local / taller / equipo</span>
+      </div>
+    </div>
+
+    <div class="presentacion-text">
+      <p class="eyebrow">Carta de presentación</p>
+      <h2 class="section-title">Quiénes somos</h2>
+      <p class="body-lg">
+        <!-- EDITAR: texto de presentación de tu marca -->
+        TRAMA nació de la idea de hacer ropa que se use de verdad: telas
+        que aguantan el uso diario, cortes simples y una paleta pensada
+        para combinar todo con todo. Cada prenda se elige o se confecciona
+        pensando en el mediano plazo, no en la temporada que viene.
+      </p>
+      <p class="body-md">
+        Somos un emprendimiento chico, con atención directa y sin
+        intermediarios. Si tenés una duda de talle, tela o color, te
+        respondemos nosotros mismos.
+      </p>
+
+      <ul class="valores-list">
+        <li><span class="valores-num">01</span> Materiales seleccionados</li>
+        <li><span class="valores-num">02</span> Producción en pequeña escala</li>
+        <li><span class="valores-num">03</span> Atención directa y personal</li>
+      </ul>
+    </div>
+  </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
+</section>
+
+<!-- ============ COLECCIÓN / PRODUCTOS ============ -->
+<section class="coleccion" id="coleccion">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Catálogo</p>
+        <h2 class="section-title">Colección</h2>
+      </div>
+      <p class="body-md coleccion-copy">
+        Precios y descripciones a modo de referencia — editalos en
+        <code>script.js</code>.
+      </p>
+    </div>
+
+    <div class="filtros" id="filtros">
+      <button class="filtro-btn is-active" data-filtro="todo">Todo</button>
+      <button class="filtro-btn" data-filtro="remeras">Remeras</button>
+      <button class="filtro-btn" data-filtro="pantalones">Pantalones</button>
+      <button class="filtro-btn" data-filtro="sueteres">Suéteres</button>
+      <button class="filtro-btn" data-filtro="accesorios">Accesorios</button>
+    </div>
+
+    <div class="productos-grid" id="productosGrid">
+      <!-- Las tarjetas de producto se generan desde script.js -->
+    </div>
+  </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
+</section>
+
+<!-- ============ UBICACIÓN ============ -->
+<section class="ubicacion" id="ubicacion">
+  <div class="wrap ubicacion-inner">
+    <div class="ubicacion-text">
+      <p class="eyebrow">Visitanos</p>
+      <h2 class="section-title">Dónde estamos</h2>
+
+      <!-- EDITAR: dirección, horarios y ciudad reales -->
+      <div class="dato-bloque">
+        <h3>Dirección</h3>
+        <p>Calle Falsa 123, Local 2<br>Buenos Aires, Argentina</p>
+      </div>
+      <div class="dato-bloque">
+        <h3>Horarios</h3>
+        <p>Lunes a viernes: 10 a 19 h<br>Sábados: 10 a 14 h</p>
+      </div>
+      <div class="dato-bloque">
+        <h3>Envíos</h3>
+        <p>Hacemos envíos a todo el país. Consultá costos por WhatsApp.</p>
+      </div>
+    </div>
+
+    <div class="ubicacion-mapa">
+      <!--
+        EDITAR: reemplazá este placeholder por un iframe de Google Maps.
+        Ejemplo:
+        <iframe src="https://www.google.com/maps/embed?..." width="100%"
+        height="100%" style="border:0;" loading="lazy"></iframe>
+      -->
+      <div class="img-placeholder mapa-placeholder">
+        <span>Mapa (Google Maps embed)</span>
+      </div>
+    </div>
+  </div>
+  <div class="stitch-divider" aria-hidden="true"></div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contacto" id="contacto">
+  <div class="wrap contacto-inner">
+    <div class="contacto-form-col">
+      <p class="eyebrow">Escribinos</p>
+      <h2 class="section-title">Contacto</h2>
+      <p class="body-md">Completá el formulario y te respondemos a la brevedad.</p>
+
+      <form id="contactForm" class="form" novalidate>
+        <div class="form-row">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          <span class="form-error" data-error-for="nombre"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tuemail@correo.com" required>
+          <span class="form-error" data-error-for="email"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="Consulta general">Consulta general</option>
+            <option value="Talles y stock">Talles y stock</option>
+            <option value="Envíos">Envíos</option>
+            <option value="Cambios y devoluciones">Cambios y devoluciones</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué necesitás" required></textarea>
+          <span class="form-error" data-error-for="mensaje"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="contacto-info-col">
+      <div class="contacto-card">
+        <h3>Escribinos directo</h3>
+        <ul class="contacto-lista">
+          <!-- EDITAR: datos de contacto reales -->
+          <li>
+            <span class="ic" aria-hidden="true">&#9993;</span>
+            <a href="mailto:hola@trama-tienda.com">hola@trama-tienda.com</a>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true">&#9742;</span>
+            <a href="tel:+541100000000">+54 11 0000-0000</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contacto-card">
+        <h3>Seguinos</h3>
+        <ul class="social-lista">
+          <!-- EDITAR: links reales de redes sociales -->
+          <li>
+            <a href="https://instagram.com/trama.tienda" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.5.45.6.24 1 .53 1.5 1s.76.9 1 1.5c.2.5.4 1.3.45 2.5.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.45 2.5-.24.6-.53 1-1 1.5s-.9.76-1.5 1c-.5.2-1.3.4-2.5.45-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.5-.45-.6-.24-1-.53-1.5-1s-.76-.9-1-1.5c-.2-.5-.4-1.3-.45-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-2 .45-2.5.24-.6.53-1 1-1.5s.9-.76 1.5-1c.5-.2 1.3-.4 2.5-.45C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52 0-4.76.07-1 .05-1.55.21-1.91.35-.48.19-.82.41-1.18.77-.36.36-.58.7-.77 1.18-.14.36-.3.9-.35 1.9C3 9.48 3 9.85 3 12s0 3.52.07 4.76c.05 1 .21 1.55.35 1.91.19.48.41.82.77 1.18.36.36.7.58 1.18.77.36.14.9.3 1.9.35 1.25.06 1.62.07 4.77.07s3.52 0 4.76-.07c1-.05 1.55-.21 1.91-.35.48-.19.82-.41 1.18-.77.36-.36.58-.7.77-1.18.14-.36.3-.9.35-1.9.06-1.25.07-1.62.07-4.77s0-3.52-.07-4.76c-.05-1-.21-1.55-.35-1.91a3.2 3.2 0 0 0-.77-1.18 3.2 3.2 0 0 0-1.18-.77c-.36-.14-.9-.3-1.9-.35C15.52 4 15.15 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.85-1.99a1.08 1.08 0 1 1-2.15 0 1.08 1.08 0 0 1 2.15 0z"/></svg>
+              </span>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/trama.tienda" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46h1.6V4.35C16.3 4.24 15.4 4.15 14.4 4.15c-2.4 0-4 1.46-4 4.15V10.5H8v3h2.4V21h3.1z"/></svg>
+              </span>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/541100000000" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.15-1.35A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 0 1 6.9 12.6l-.24.38.62 2.27-2.32-.61-.37.22A8.2 8.2 0 1 1 12 3.8zm-3.1 4.2c-.2 0-.5.06-.77.35-.26.3-1 1-1 2.4s1.03 2.8 1.18 3c.15.2 2 3.15 4.98 4.3 2.47.94 2.98.75 3.5.7.53-.05 1.7-.7 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.13-.26-.2-.55-.35-.29-.15-1.7-.84-1.96-.94-.26-.1-.46-.15-.65.15-.2.3-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.3-.02-.46.13-.6.13-.14.29-.35.44-.53.15-.17.2-.3.29-.5.1-.2.05-.37-.02-.52-.07-.15-.65-1.62-.9-2.22-.23-.57-.47-.5-.65-.5z"/></svg>
+              </span>
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="#inicio" class="logo footer-logo">TRAMA<span class="logo-dot">.</span></a>
+      <!-- EDITAR: dirección corta para el pie -->
+      <p>Calle Falsa 123, Buenos Aires</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#coleccion">Colección</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://instagram.com/trama.tienda" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://facebook.com/trama.tienda" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/541100000000" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="footerYear"></span> TRAMA. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
